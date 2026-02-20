@@ -63,6 +63,14 @@
     }
   }
 
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
   function next() {
     goTo(current + 1);
   }
@@ -78,6 +86,10 @@
     if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
       e.preventDefault();
       prev();
+    }
+    if (e.key === "f" || e.key === "F") {
+      e.preventDefault();
+      toggleFullscreen();
     }
   }
 
