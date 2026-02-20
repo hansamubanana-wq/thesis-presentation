@@ -22,7 +22,7 @@
 
 <div class="slide">
     <div class="sub-glow"></div>
-    <h2 class="s16-head">おすすめの<span class="gold">参考文献・作品</span></h2>
+    <h2 class="s16-head">おすすめの<span class="gold">参考文献</span></h2>
 
     <div class="references">
         <!-- 参考文献 1 -->
@@ -33,7 +33,7 @@
                 <p class="ref-author dim">ニッコロ・マキャヴェッリ</p>
                 <p class="ref-desc">
                     目的のために手段を選ばない冷徹な政治力学や「必要悪」について論じた古典的名著。
-                    本作のテーマに深く重なる、リーダーとしてのあり方を考えさせられる一冊です。
+                    本作のテーマに深く重なる、リーダーとしてのあり方を考えさせられる一冊。
                 </p>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <h3 class="ref-title">『Ghost of Tsushima』</h3>
                 <p class="ref-author dim">Sucker Punch Productions</p>
                 <p class="ref-desc">
-                    本プレゼンでも題材としたゲームです。武士道と現実の戦いとの葛藤が美しくも残酷に描かれています。
+                    本卒業論文で題材としたゲームです。武士道と現実の戦いとの葛藤が美しくも残酷に描かれています。
                     <span class="highlight"
                         >とにかく面白いので、ぜひ実際にプレイしてみてください！</span
                     >
