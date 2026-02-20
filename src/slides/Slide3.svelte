@@ -59,19 +59,18 @@
   .box-sub { font-size:clamp(0.9rem,1.6vw,1.1rem); color:rgba(245,240,232,0.65); }
   .s3-vs { font-size:clamp(2.5rem,6vw,5rem); font-weight:900; color:#c0504d; flex-shrink:0; }
 
-  /* 710×291 panoramic — full-width strip */
+  /* 710×291 panoramic — nicely displayed entirely */
   .s3-scroll { width:100%; text-align:center; }
   .s3-scroll img {
-    width:100%; height:auto;
-    max-height:180px;
-    object-fit:cover;
-    object-position:center center;
-    opacity:0.75;
-    border-top:1px solid rgba(201,168,76,0.15);
-    border-bottom:1px solid rgba(201,168,76,0.15);
-    display:block;
-    /* preserve the wide panoramic naturally */
-    aspect-ratio:710 / 291;
+    width: 65%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    display: block;
   }
   .scroll-cap { font-size:0.7rem; color:rgba(245,240,232,0.3); letter-spacing:0.1em; margin-top:0.4rem; }
 </style>
