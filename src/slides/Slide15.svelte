@@ -33,12 +33,6 @@
           ease: "power3.out",
         },
         "-=0.2",
-      )
-      .fromTo(
-        ".s15-author",
-        { opacity: 0 },
-        { opacity: 1, duration: 1 },
-        "-=0.3",
       );
     gsap.to(".s15-final", {
       textShadow: "0 0 40px rgba(201,168,76,0.5)",
@@ -71,28 +65,28 @@
     {/each}
   </div>
 
-  <p class="s15-label">結論：真の「誉れ」とは何か</p>
-  <h2 class="s15-head">形式から<span class="gold">実存</span>へ</h2>
+  <p class="s15-label">結論：「必要悪」は存在するのか</p>
+  <h2 class="s15-head">正当化から<span class="gold">実存的覚悟</span>へ</h2>
 
   <div class="s15-contrast">
-    <div class="honor-old">
-      <div class="honor-label dim">志村の「誉れ」</div>
-      <div class="honor-val">武士としての作法・体面</div>
+    <div class="concept-old">
+      <div class="concept-label dim">一般的な「必要悪」</div>
+      <div class="concept-val">大義を名目に<br />悪を正当化する免罪符</div>
     </div>
     <div class="arrow">→</div>
-    <div class="honor-new">
-      <div class="honor-label gold">仁の「誉れ」</div>
-      <div class="honor-val">泥にまみれてでも<br />民の命を救う</div>
+    <div class="concept-new">
+      <div class="concept-label gold">仁が引き受けた「悪」</div>
+      <div class="concept-val">
+        自らが永遠の罪人となり<br />民を救う絶対的犠牲
+      </div>
     </div>
   </div>
 
   <blockquote class="s15-final">
-    大切なものを守り抜く<br />
-    <strong>「魂の在り方」</strong>——<br />
-    それが真の<em>誉れ</em>である
+    「必要悪」という言葉では決して救われない<br />
+    しかし、罪を背負ってでも大切なものを守り抜く<br />
+    <strong>「覚悟」</strong>に我々は心を穿たれる
   </blockquote>
-
-  <p class="s15-author dim">― 土蔵 創一</p>
 </div>
 
 <style>
@@ -140,7 +134,7 @@
     margin-bottom: 1.2rem;
   }
   .s15-head {
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
     font-weight: 900;
     text-align: center;
     letter-spacing: 0.08em;
@@ -159,29 +153,29 @@
     margin-bottom: 2.5rem;
     width: min(760px, 85vw);
   }
-  .honor-old,
-  .honor-new {
+  .concept-old,
+  .concept-new {
     flex: 1;
     text-align: center;
     padding: 1.5rem 1.5rem;
     border-radius: 8px;
   }
-  .honor-old {
+  .concept-old {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
-  .honor-new {
+  .concept-new {
     background: rgba(201, 168, 76, 0.07);
     border: 1px solid rgba(201, 168, 76, 0.25);
   }
-  .honor-label {
+  .concept-label {
     font-size: clamp(0.8rem, 1.4vw, 1rem);
     font-weight: 700;
     letter-spacing: 0.08em;
     margin-bottom: 0.5rem;
   }
-  .honor-val {
-    font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  .concept-val {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
     color: rgba(245, 240, 232, 0.8);
     line-height: 1.5;
   }
@@ -191,24 +185,15 @@
     flex-shrink: 0;
   }
   .s15-final {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.3rem, 2.5vw, 2.1rem);
     color: #c9a84c;
     text-align: center;
     line-height: 1.8;
-    max-width: 640px;
+    max-width: 760px;
     font-style: normal;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
   }
   .s15-final strong {
     color: #f5f0e8;
-  }
-  .s15-final em {
-    font-style: italic;
-    color: #e8c860;
-  }
-  .s15-author {
-    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
-    letter-spacing: 0.2em;
-    text-align: center;
   }
 </style>
