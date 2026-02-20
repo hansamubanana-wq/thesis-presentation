@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1a1008;
+  --parchment: #f5f0e8;
+  --blood: #8b1a1a;
+  --gold: #c9a84c;
+  --ash: #4a4035;
+  --mist: rgba(245, 240, 232, 0.08);
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0805;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  /* 画面の2/3サイズにしてscale(1.5)で中央から拡大し、ちょうど全画面を埋める */
+  width: calc(100vw / 1.5);
+  height: calc(100vh / 1.5);
+  flex-shrink: 0;
+  transform: scale(1.5);
+  transform-origin: center center;
+  font-family: 'Noto Serif JP', serif;
+  color: var(--parchment);
+  overflow: hidden;
+  position: relative;
+}

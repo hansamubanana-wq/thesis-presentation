@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(node -e \":*)",
+      "Bash(printf:*)",
+      "Bash(npx create-vite@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(start \"\" \"http://localhost:5173\")",
+      "Bash(npx svelte-check:*)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(powershell -File -:*)",
+      "Bash(powershell.exe -NonInteractive -Command \"Add-Type -AssemblyName PresentationCore; foreach \\($f in @\\(''invasion.jpg'',''nobunaga.jpg''\\)\\) { $p = ''C:\\\\Users\\\\Soichi\\\\thesis-presentation\\\\public\\\\images\\\\'' + $f; try { $s = [System.IO.File]::OpenRead\\($p\\); $d = [System.Windows.Media.Imaging.BitmapDecoder]::Create\\($s, ''None'', ''OnDemand''\\); $fr = $d.Frames[0]; Write-Output \\($f + '': '' + $fr.PixelWidth + ''x'' + $fr.PixelHeight\\); $s.Close\\(\\) } catch { Write-Output \\($f + '': ERROR''\\) } }\")",
+      "Bash(powershell.exe -NonInteractive -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Soichi\\\\thesis-presentation\\\\get_dims.ps1\")"
+    ]
+  }
+}

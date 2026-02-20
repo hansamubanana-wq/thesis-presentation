@@ -1,0 +1,22 @@
+{
+  "name": "thesis-presentation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.0.0",
+    "typescript": "^5.5.3",
+    "vite": "^6.0.1",
+    "svelte-check": "^4.0.0",
+    "@tsconfig/svelte": "^5.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

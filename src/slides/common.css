@@ -1,0 +1,43 @@
+/* Shared slide base styles */
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 8vw;
+  overflow: hidden;
+  position: relative;
+  background: #09070a;
+}
+
+.slide-label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(201, 168, 76, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.slide-heading {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  color: #f5f0e8;
+  margin-bottom: 1.5rem;
+}
+
+.slide-sub {
+  font-size: clamp(1rem, 2.2vw, 1.6rem);
+  color: rgba(245, 240, 232, 0.65);
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.gold { color: #c9a84c; }
+.red  { color: #c0504d; }
+.dim  { color: rgba(245,240,232,0.45); }
