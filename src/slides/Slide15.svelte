@@ -66,26 +66,32 @@
   </div>
 
   <p class="s15-label">結論：「必要悪」は存在するのか</p>
-  <h2 class="s15-head">正当化から<span class="gold">実存的覚悟</span>へ</h2>
+  <h2 class="s15-head">規範と生存の<span class="gold">ジレンマ</span></h2>
 
   <div class="s15-contrast">
-    <div class="concept-old">
-      <div class="concept-label dim">一般的な「必要悪」</div>
-      <div class="concept-val">大義を名目に<br />悪を正当化する免罪符</div>
+    <div class="logic-norm">
+      <div class="logic-label dim">「平時」の論理（規範）</div>
+      <div class="logic-val">
+        社会の秩序を維持するため<br />ルールの遵守は絶対
+      </div>
     </div>
-    <div class="arrow">→</div>
-    <div class="concept-new">
-      <div class="concept-label gold">仁が引き受けた「悪」</div>
-      <div class="concept-val">
-        自らが永遠の罪人となり<br />民を救う絶対的犠牲
+    <div class="arrow">VS</div>
+    <div class="logic-surv">
+      <div class="logic-label highlight">「非常時」の論理（生存）</div>
+      <div class="logic-val">
+        危機における規範の固守は<br />却って大量の死を招く
       </div>
     </div>
   </div>
 
   <blockquote class="s15-final">
-    「必要悪」という言葉では決して救われない<br />
-    しかし、罪を背負ってでも大切なものを守り抜く<br />
-    <strong>「覚悟」</strong>に我々は心を穿たれる
+    極限状態において、より多くの命を救うという「結果」のために<br />
+    一時的に規範を破る行為（手段としての悪）は<strong>一定の正当性</strong
+    >を持つ。<br />
+    <span class="s15-final-bottom"
+      >ゆえに、境井仁の選択は単なる堕落ではなく、<br
+      />状況に応じた合理的な判断であった。</span
+    >
   </blockquote>
 </div>
 
@@ -153,47 +159,59 @@
     margin-bottom: 2.5rem;
     width: min(760px, 85vw);
   }
-  .concept-old,
-  .concept-new {
+  .logic-norm,
+  .logic-surv {
     flex: 1;
     text-align: center;
-    padding: 1.5rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     border-radius: 8px;
   }
-  .concept-old {
+  .logic-norm {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
-  .concept-new {
-    background: rgba(201, 168, 76, 0.07);
-    border: 1px solid rgba(201, 168, 76, 0.25);
+  .logic-surv {
+    background: rgba(139, 26, 26, 0.08);
+    border: 1px solid rgba(139, 26, 26, 0.3);
   }
-  .concept-label {
-    font-size: clamp(0.8rem, 1.4vw, 1rem);
+  .logic-label {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
   }
-  .concept-val {
+  .highlight {
+    color: #c0504d;
+  }
+  .logic-val {
     font-size: clamp(1.1rem, 2vw, 1.6rem);
-    color: rgba(245, 240, 232, 0.8);
+    color: rgba(245, 240, 232, 0.9);
     line-height: 1.5;
   }
   .arrow {
     font-size: clamp(2rem, 4vw, 3rem);
     color: rgba(201, 168, 76, 0.4);
     flex-shrink: 0;
+    font-weight: 900;
   }
   .s15-final {
-    font-size: clamp(1.3rem, 2.5vw, 2.1rem);
-    color: #c9a84c;
+    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+    color: rgba(245, 240, 232, 0.85);
     text-align: center;
     line-height: 1.8;
-    max-width: 760px;
+    max-width: 850px;
     font-style: normal;
     margin-bottom: 2rem;
   }
   .s15-final strong {
     color: #f5f0e8;
+    font-weight: 900;
+  }
+  .s15-final-bottom {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #c9a84c;
   }
 </style>
