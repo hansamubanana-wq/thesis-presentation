@@ -162,7 +162,7 @@
         position: absolute;
         inset: 0;
         z-index: 1;
-        opacity: 0.5; /* Increased opacity so the portrait is visible */
+        opacity: 0.85; /* Increased opacity makes image much brighter */
         transition:
             opacity 0.5s ease,
             transform 0.5s ease;
@@ -175,18 +175,18 @@
     .jn-bg {
         background-color: #1a1e29;
         background-image: url("/images/jin_portrait.jpg");
-        box-shadow: inset 0 0 120px #000;
+        box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8); /* Less aggressive shadow */
     }
 
     /* Shimura: Honor, Crimson/Gold */
     .sm-bg {
         background-color: #1a0808;
         background-image: url("/images/shimura_portrait.jpg");
-        box-shadow: inset 0 0 120px #000;
+        box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8); /* Less aggressive shadow */
     }
 
     .char-box:hover .char-bg {
-        opacity: 0.8;
+        opacity: 1;
         transform: scale(1.05);
     }
 

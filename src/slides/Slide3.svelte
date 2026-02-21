@@ -41,7 +41,7 @@
 
 <div class="slide">
   <p class="s3-year">1274年（文永11年）― 小茂田浜</p>
-  <h2 class="s3-head">パラダイムの衝突</h2>
+  <h2 class="s3-head">相容れない二つの道</h2>
 
   <div class="clash">
     <div class="box s3-left gold-box">

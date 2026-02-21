@@ -59,7 +59,7 @@
       <p class="s13-label">考察①：正義の相対化</p>
       <h2 class="s13-head">「<span class="red">思考停止</span>」という悪</h2>
       <div class="s13-concept">
-        <div class="banality">悪の凡庸さ</div>
+        <div class="banality">誰もが陥る「悪」</div>
         <div class="sub-en">Banality of Evil</div>
       </div>
       <div class="s13-flip">
@@ -170,20 +170,49 @@
   }
 
   @media (max-width: 1366px) {
-    .inner { gap:2.5rem; }
-    .arendt-img { width:clamp(140px,20vw,230px); }
-    .s13-head { font-size:clamp(1.8rem,3.8vw,3rem); margin-bottom:1.5rem; }
-    .banality { font-size:clamp(2rem,4.5vw,4rem); }
-    .s13-concept { margin-bottom:1.5rem; }
+    .inner {
+      gap: 2.5rem;
+    }
+    .arendt-img {
+      width: clamp(140px, 20vw, 230px);
+    }
+    .s13-head {
+      font-size: clamp(1.8rem, 3.8vw, 3rem);
+      margin-bottom: 1.5rem;
+    }
+    .banality {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+    }
+    .s13-concept {
+      margin-bottom: 1.5rem;
+    }
   }
   @media (max-width: 1024px) {
-    .inner { gap:1.5rem; }
-    .arendt-img { width:clamp(110px,15vw,170px); }
-    .s13-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.6rem; }
-    .s13-head { font-size:clamp(1.5rem,3.5vw,2.5rem); margin-bottom:1rem; }
-    .banality { font-size:clamp(1.8rem,4vw,3rem); }
-    .sub-en { font-size:clamp(0.85rem,1.5vw,1.2rem); }
-    .s13-flip { font-size:clamp(0.95rem,1.8vw,1.4rem); }
-    .s13-concept { margin-bottom:1rem; }
+    .inner {
+      gap: 1.5rem;
+    }
+    .arendt-img {
+      width: clamp(110px, 15vw, 170px);
+    }
+    .s13-label {
+      font-size: clamp(0.75rem, 1.3vw, 1rem);
+      margin-bottom: 0.6rem;
+    }
+    .s13-head {
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+    .banality {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+    .sub-en {
+      font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+    }
+    .s13-flip {
+      font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+    }
+    .s13-concept {
+      margin-bottom: 1rem;
+    }
   }
 </style>
