@@ -335,7 +335,7 @@
       <div class="mark ng">✕</div>
       <div class="case-text">
         <div class="case-title">太った男を突き落とす</div>
-        <div class="case-sub">計算は同じ ― でも「できない」</div>
+        <div class="case-sub">計算は同じでもできない</div>
       </div>
       <div class="anim-container">
         <svg viewBox="0 0 200 100" class="scenario-svg">
