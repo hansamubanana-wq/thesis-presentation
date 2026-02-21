@@ -1,6 +1,17 @@
 <script lang="ts">
   import { onMount, tick } from "svelte";
   import { gsap } from "gsap";
+  import { CustomEase } from "gsap/dist/CustomEase"; // Or just use rough keyframes if plugin not available
+
+  // Custom rough shake using keyframes instead of needing an extra plugin
+  const shakeKeyframes = [
+    { x: -10, y: 5 },
+    { x: 8, y: -8 },
+    { x: -6, y: 3 },
+    { x: 4, y: -4 },
+    { x: -2, y: 2 },
+    { x: 0, y: 0 },
+  ];
 
   let okBox: HTMLElement;
   let ngBox: HTMLElement;
@@ -76,6 +87,17 @@
       )
       // Train diverts (moves down to the lower track)
       .to(".trolley-a", { x: 120, y: 30, duration: 1, ease: "power1.out" })
+      // IMPACT
+      .to(
+        ".slide",
+        { keyframes: shakeKeyframes, duration: 0.4, ease: "power1.inOut" },
+        "-=0.2",
+      ) // Shake slide
+      .to(
+        ".red-flash",
+        { opacity: 1, duration: 0.05, yoyo: true, repeat: 1 },
+        "-=0.4",
+      ) // Flash red
       // 1 Person hit effect
       .to(
         ".person-1",
@@ -86,7 +108,7 @@
           duration: 0.2,
           ease: "power2.in",
         },
-        "-=0.2",
+        "-=0.4",
       )
       .to(".blood-a", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.2");
 
@@ -101,8 +123,19 @@
         { y: 20, opacity: 1, duration: 0.5, ease: "power2.in" },
         "-=0.6",
       )
+      // IMPACT
+      .to(
+        ".slide",
+        { keyframes: shakeKeyframes, duration: 0.5, ease: "power1.inOut" },
+        "-=0.1",
+      ) // Shake slide harder
+      .to(
+        ".red-flash",
+        { opacity: 1, duration: 0.05, yoyo: true, repeat: 1 },
+        "-=0.5",
+      ) // Flash red
       // Train hits fatman and stops
-      .to(".trolley-b", { x: 80, duration: 0.2, ease: "power2.out" })
+      .to(".trolley-b", { x: 80, duration: 0.2, ease: "power2.out" }, "-=0.5")
       .to(
         ".fatman",
         {
@@ -111,9 +144,9 @@
           transformOrigin: "bottom center",
           duration: 0.2,
         },
-        "-=0.2",
+        "-=0.4",
       )
-      .to(".blood-b", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.1")
+      .to(".blood-b", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.3")
       // Train completely stopped
       .to(".trolley-b", { x: 80, duration: 1 });
   }
@@ -141,6 +174,16 @@
       )
       .to(".trolley-a", { x: 120, y: 30, duration: 1, ease: "power1.out" })
       .to(
+        ".slide",
+        { keyframes: shakeKeyframes, duration: 0.4, ease: "power1.inOut" },
+        "-=0.2",
+      )
+      .to(
+        ".red-flash",
+        { opacity: 1, duration: 0.05, yoyo: true, repeat: 1 },
+        "-=0.4",
+      )
+      .to(
         ".person-1",
         {
           opacity: 0.2,
@@ -149,7 +192,7 @@
           duration: 0.2,
           ease: "power2.in",
         },
-        "-=0.2",
+        "-=0.4",
       )
       .to(".blood-a", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.2");
   }
@@ -166,7 +209,17 @@
         { y: 20, opacity: 1, duration: 0.5, ease: "power2.in" },
         "-=0.6",
       )
-      .to(".trolley-b", { x: 80, duration: 0.2, ease: "power2.out" })
+      .to(
+        ".slide",
+        { keyframes: shakeKeyframes, duration: 0.5, ease: "power1.inOut" },
+        "-=0.1",
+      )
+      .to(
+        ".red-flash",
+        { opacity: 1, duration: 0.05, yoyo: true, repeat: 1 },
+        "-=0.5",
+      )
+      .to(".trolley-b", { x: 80, duration: 0.2, ease: "power2.out" }, "-=0.5")
       .to(
         ".fatman",
         {
@@ -175,13 +228,14 @@
           transformOrigin: "bottom center",
           duration: 0.2,
         },
-        "-=0.2",
+        "-=0.4",
       )
-      .to(".blood-b", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.1");
+      .to(".blood-b", { opacity: 1, scale: 1.5, duration: 0.3 }, "-=0.3");
   }
 </script>
 
 <div class="slide">
+  <div class="red-flash"></div>
   <h2 class="s10-head">トロッコ問題 <span class="head-trolley">🚃</span></h2>
   <div class="cases">
     <!-- Case A: Lever -->
@@ -360,6 +414,15 @@
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
     gap: 0;
+  }
+  .red-flash {
+    position: absolute;
+    inset: 0;
+    background: rgba(139, 26, 26, 0.25);
+    box-shadow: inset 0 0 100px rgba(139, 26, 26, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 50; /* Ensure it covers everything */
   }
   .s10-head {
     font-size: clamp(3rem, 7vw, 6rem);
