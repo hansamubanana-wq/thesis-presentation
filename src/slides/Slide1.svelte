@@ -153,4 +153,17 @@
     color: rgba(201, 168, 76, 0.6);
     letter-spacing: 0.25em;
   }
+
+  /* iPad landscape / tablet */
+  @media (max-width: 1366px) {
+    h1 { font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 2rem; }
+    blockquote { font-size: clamp(1.2rem, 2.5vw, 2rem); margin-bottom: 1.8rem; }
+    .s1-tag { margin-bottom: 1.5rem; }
+  }
+  @media (max-width: 1024px) {
+    h1 { font-size: clamp(1.8rem, 4.5vw, 3.2rem); margin-bottom: 1.5rem; }
+    blockquote { font-size: clamp(1rem, 2.2vw, 1.6rem); margin-bottom: 1.5rem; }
+    .s1-tag { font-size: clamp(0.75rem, 1.3vw, 0.95rem); margin-bottom: 1rem; }
+    .s1-name { font-size: clamp(0.85rem, 1.5vw, 1.1rem); }
+  }
 </style>

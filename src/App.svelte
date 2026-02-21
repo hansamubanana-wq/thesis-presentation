@@ -257,4 +257,19 @@
     letter-spacing: 0.1em;
     z-index: 200;
   }
+
+  /* iPad / tablet touch-friendly adjustments */
+  @media (max-width: 1366px) {
+    .dot { width: 8px; height: 8px; }
+    .arrow { font-size: 1rem; padding: 0.6rem 0.8rem; }
+    .progress-dots { gap: 0.5rem; bottom: 1.2rem; }
+  }
+  @media (max-width: 1024px) {
+    .dot { width: 10px; height: 10px; }
+    .dot.active { transform: scale(1.3); }
+    .arrow { font-size: 0.9rem; padding: 0.5rem 0.7rem; }
+    .arrow-left { left: 0.5rem; }
+    .arrow-right { right: 0.5rem; }
+    .progress-dots { gap: 0.4rem; bottom: 1rem; }
+  }
 </style>

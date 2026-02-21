@@ -73,4 +73,24 @@
     display: block;
   }
   .scroll-cap { font-size:0.7rem; color:rgba(245,240,232,0.3); letter-spacing:0.1em; margin-top:0.4rem; }
+
+  @media (max-width: 1366px) {
+    .s3-head { font-size:clamp(2rem,4.5vw,3.8rem); margin-bottom:1.5rem; }
+    .clash { gap:1.5rem; margin-bottom:1.5rem; }
+    .box { padding:1.5rem 1.8rem; min-width:180px; }
+    .box-title { font-size:clamp(1.2rem,2.5vw,2rem); }
+    .s3-vs { font-size:clamp(2rem,4.5vw,3.5rem); }
+    .icon { font-size:2rem; margin-bottom:0.5rem; }
+  }
+  @media (max-width: 1024px) {
+    .s3-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1rem; }
+    .s3-year { font-size:clamp(0.75rem,1.3vw,0.95rem); margin-bottom:0.8rem; }
+    .clash { gap:1rem; margin-bottom:1rem; }
+    .box { padding:1rem 1.2rem; min-width:140px; }
+    .box-title { font-size:clamp(1rem,2.2vw,1.6rem); }
+    .box-sub { font-size:clamp(0.75rem,1.3vw,0.9rem); }
+    .s3-vs { font-size:clamp(1.8rem,4vw,3rem); }
+    .icon { font-size:1.6rem; margin-bottom:0.3rem; }
+    .s3-scroll img { width:55%; max-width:400px; }
+  }
 </style>

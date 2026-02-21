@@ -151,4 +151,21 @@
         border-bottom: 1px solid rgba(201, 168, 76, 0.5);
         padding-bottom: 2px;
     }
+
+    @media (max-width: 1366px) {
+        .s16-head { font-size:clamp(2rem,4.5vw,3.5rem); margin-bottom:2.5rem; }
+        .ref-card { padding:1.5rem; gap:1.5rem; }
+        .references { gap:2rem; }
+        .ref-title { font-size:clamp(1.2rem,2.3vw,1.7rem); }
+        .ref-desc { font-size:clamp(0.9rem,1.5vw,1.1rem); }
+    }
+    @media (max-width: 1024px) {
+        .s16-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:2rem; }
+        .ref-card { padding:1.2rem; gap:1.2rem; }
+        .references { gap:1.5rem; }
+        .ref-icon { font-size:clamp(2rem,3vw,2.8rem); }
+        .ref-title { font-size:clamp(1rem,2vw,1.4rem); }
+        .ref-author { font-size:clamp(0.8rem,1.3vw,0.95rem); }
+        .ref-desc { font-size:clamp(0.8rem,1.3vw,0.95rem); line-height:1.5; }
+    }
 </style>

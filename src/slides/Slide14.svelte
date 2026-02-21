@@ -163,4 +163,21 @@
     font-weight: 900;
     font-size: 1.2em;
   }
+
+  @media (max-width: 1366px) {
+    .s14-head { font-size:clamp(2rem,4.5vw,4rem); margin-bottom:2rem; }
+    .main { gap:2.5rem; }
+    .s14-mask { font-size:clamp(3rem,6vw,5rem); }
+    .s14-item { font-size:clamp(1.2rem,2.5vw,1.8rem); gap:1rem; }
+    .cost-list { gap:1rem; }
+  }
+  @media (max-width: 1024px) {
+    .s14-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.6rem; }
+    .s14-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1.5rem; }
+    .main { gap:2rem; }
+    .portrait { width:90px; height:115px; }
+    .s14-mask { font-size:clamp(2.5rem,5vw,4rem); }
+    .s14-item { font-size:clamp(1rem,2.2vw,1.5rem); gap:0.8rem; }
+    .cost-list { gap:0.8rem; }
+  }
 </style>

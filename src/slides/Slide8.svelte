@@ -90,4 +90,30 @@
   .sub  { font-size:clamp(0.85rem,1.5vw,1.1rem); color:rgba(245,240,232,0.55); }
   .op   { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:300; color:rgba(245,240,232,0.3); flex-shrink:0; }
   .gold { color:#c9a84c; } .red { color:#c0504d; }
+
+  @media (max-width: 1366px) {
+    .inner { gap:2.5rem; }
+    .mach-img { width:clamp(130px,18vw,220px); }
+    .s8-head { font-size:clamp(1.8rem,3.8vw,3rem); margin-bottom:2rem; }
+    .formula { gap:1rem; }
+    .elem { padding:1rem 1.5rem; }
+    .emo { font-size:clamp(1.6rem,3vw,2.5rem); }
+    .ghost-char { font-size:clamp(1.6rem,3vw,2.5rem); }
+    .name { font-size:clamp(0.95rem,1.7vw,1.3rem); }
+    .sub { font-size:clamp(0.75rem,1.3vw,0.95rem); }
+    .op { font-size:clamp(1.4rem,2.8vw,2.2rem); }
+  }
+  @media (max-width: 1024px) {
+    .inner { gap:1.5rem; }
+    .mach-img { width:clamp(100px,14vw,160px); }
+    .s8-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.6rem; }
+    .s8-head { font-size:clamp(1.5rem,3.5vw,2.5rem); margin-bottom:1.5rem; }
+    .formula { gap:0.8rem; }
+    .elem { padding:0.8rem 1rem; }
+    .emo { font-size:clamp(1.3rem,2.5vw,2rem); margin-bottom:0.3rem; }
+    .ghost-char { font-size:clamp(1.3rem,2.5vw,2rem); margin-bottom:0.3rem; }
+    .name { font-size:clamp(0.85rem,1.5vw,1.1rem); }
+    .sub { font-size:clamp(0.7rem,1.2vw,0.85rem); }
+    .op { font-size:clamp(1.2rem,2.5vw,1.8rem); }
+  }
 </style>

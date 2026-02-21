@@ -87,4 +87,17 @@
     color: #c0504d;
     font-weight: 900;
   }
+
+  @media (max-width: 1366px) {
+    .s4-en { font-size:clamp(4rem,11vw,9rem); margin:0 0 2rem; }
+    .eq-a, .eq-b { font-size:clamp(1.1rem,2.2vw,1.8rem); }
+    .eq-sym { font-size:clamp(1.5rem,3vw,2.5rem); }
+    .s4-eq { gap:1rem; padding:1.2rem 2rem; }
+  }
+  @media (max-width: 1024px) {
+    .s4-en { font-size:clamp(3rem,9vw,7rem); margin:0 0 1.5rem; }
+    .eq-a, .eq-b { font-size:clamp(0.95rem,2vw,1.4rem); }
+    .eq-sym { font-size:clamp(1.2rem,2.5vw,2rem); }
+    .s4-eq { gap:0.8rem; padding:1rem 1.5rem; }
+  }
 </style>
