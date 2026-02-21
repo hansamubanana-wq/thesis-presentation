@@ -92,7 +92,7 @@
     line-height: 1;
   }
   .s7-beam {
-    width: min(560px, 80%);
+    width: min(800px, 90%);
     height: 5px;
     background: linear-gradient(
       to right,
@@ -105,7 +105,7 @@
     transform-origin: center;
   }
   .pans {
-    width: min(560px, 80%);
+    width: min(800px, 90%);
     display: flex;
     justify-content: space-between;
     margin-top: 1.2rem;

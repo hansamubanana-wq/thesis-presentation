@@ -196,9 +196,9 @@
         padding: 2.5rem 2rem;
         background: linear-gradient(
             to top,
-            rgba(5, 4, 6, 1) 0%,
-            rgba(5, 4, 6, 0.8) 70%,
-            transparent 100%
+            rgba(5, 4, 6, 0.95) 0%,
+            rgba(5, 4, 6, 0.5) 40%,
+            transparent 80%
         );
         height: 100%;
         display: flex;
@@ -316,9 +316,9 @@
             padding: 1.5rem;
             background: linear-gradient(
                 to right,
-                rgba(5, 4, 6, 1) 0%,
-                rgba(5, 4, 6, 0.85) 60%,
-                transparent 100%
+                rgba(5, 4, 6, 0.95) 0%,
+                rgba(5, 4, 6, 0.5) 40%,
+                transparent 80%
             );
             justify-content: center;
         }

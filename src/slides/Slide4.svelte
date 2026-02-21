@@ -4,12 +4,11 @@
   onMount(() => {
     gsap.fromTo(
       ".s4-en",
-      { opacity: 0, scale: 0.95, filter: "blur(10px)" },
+      { opacity: 0, filter: "blur(10px)" },
       {
         opacity: 1,
-        scale: 1.05,
         filter: "blur(0px)",
-        duration: 10,
+        duration: 2,
         ease: "power2.out",
       },
     );
@@ -23,13 +22,13 @@
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, ease: "power2.out", delay: 1.4 },
     );
-    // Removed the flashy red repeat animation, keeping the slow 10s scale-up instead for an elegant Japanese look.
+    // Elegant static fade-in for English text without scale-up or looping.
   });
 </script>
 
 <div class="slide">
   <p class="s4-jp">解けない難問</p>
-  <h2 class="s4-en">究極のジレンマ</h2>
+  <h2 class="s4-en">APORIA</h2>
   <div class="s4-eq">
     <span class="eq-a">「誉れある戦いに固執する」</span>
     <span class="eq-sym">＝</span>
@@ -58,12 +57,12 @@
     margin-bottom: 1.2rem;
   }
   .s4-en {
-    font-size: clamp(3.5rem, 8vw, 7rem); /* Reduced size for Japanese text */
+    font-size: clamp(4.5rem, 12vw, 10rem);
     font-weight: 900;
     color: #f5f0e8;
     margin: 0 0 2.5rem;
-    letter-spacing: 0.15em; /* Wider tracking for dramatic effect */
-    text-shadow: 0 4px 20px rgba(139, 26, 26, 0.4); /* Built-in subtle red glow instead of animation */
+    letter-spacing: 0.2em;
+    text-shadow: 0 4px 30px rgba(139, 26, 26, 0.5);
   }
   .s4-eq {
     display: flex;
@@ -90,7 +89,7 @@
 
   @media (max-width: 1366px) {
     .s4-en {
-      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-size: clamp(3.5rem, 9vw, 8rem);
       margin: 0 0 2rem;
     }
     .eq-a,
@@ -107,7 +106,7 @@
   }
   @media (max-width: 1024px) {
     .s4-en {
-      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-size: clamp(2.5rem, 7vw, 6rem);
       margin: 0 0 1.5rem;
     }
     .eq-a,
