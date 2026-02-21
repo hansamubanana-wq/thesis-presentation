@@ -17,10 +17,28 @@
         "-=0.2",
       )
       .fromTo(
-        ".s15-contrast",
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" },
+        ".logic-norm",
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
         "-=0.3",
+      )
+      .fromTo(
+        ".arrow",
+        { opacity: 0, scale: 0, rotation: -90 },
+        {
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 0.6,
+          ease: "back.out(2)",
+        },
+        "-=0.2",
+      )
+      .fromTo(
+        ".logic-surv",
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
+        "-=0.2",
       )
       .fromTo(
         ".s15-final",
@@ -32,8 +50,10 @@
           duration: 1.3,
           ease: "power3.out",
         },
-        "-=0.2",
+        "+=0.2",
       );
+
+    // Continuous animations
     gsap.to(".s15-final", {
       textShadow: "0 0 40px rgba(201,168,76,0.5)",
       repeat: -1,
@@ -42,6 +62,28 @@
       ease: "sine.inOut",
       delay: 2.5,
     });
+
+    gsap.to(".arrow", {
+      scale: 1.1,
+      textShadow: "0 0 20px rgba(200,60,10,0.8)",
+      color: "#c0504d",
+      repeat: -1,
+      yoyo: true,
+      duration: 0.8,
+      ease: "power1.inOut",
+      delay: 2,
+    });
+
+    gsap.to(".logic-surv", {
+      boxShadow: "0 0 15px rgba(139,26,26,0.4)",
+      borderColor: "rgba(139,26,26,0.6)",
+      repeat: -1,
+      yoyo: true,
+      duration: 1.5,
+      ease: "sine.inOut",
+      delay: 2.5,
+    });
+
     gsap.to(".end-particle", {
       y: () => -(Math.random() * 300 + 100),
       opacity: 0,
@@ -155,6 +197,7 @@
   .s15-contrast {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     margin-bottom: 2.5rem;
     width: min(760px, 85vw);
@@ -163,8 +206,9 @@
   .logic-surv {
     flex: 1;
     text-align: center;
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 8px;
+    transition: transform 0.3s ease;
   }
   .logic-norm {
     background: rgba(255, 255, 255, 0.03);
@@ -173,12 +217,35 @@
   .logic-surv {
     background: rgba(139, 26, 26, 0.08);
     border: 1px solid rgba(139, 26, 26, 0.3);
+    position: relative;
+    overflow: hidden;
   }
+  .logic-surv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(200, 60, 10, 0.1),
+      transparent
+    );
+    animation: shine 3s infinite linear 2s;
+  }
+  @keyframes shine {
+    to {
+      left: 200%;
+    }
+  }
+
   .logic-label {
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
   .highlight {
     color: #c0504d;
@@ -189,10 +256,12 @@
     line-height: 1.5;
   }
   .arrow {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: rgba(201, 168, 76, 0.4);
     flex-shrink: 0;
     font-weight: 900;
+    font-style: italic;
+    transform-origin: center center;
   }
   .s15-final {
     font-size: clamp(1.15rem, 2.2vw, 1.55rem);
@@ -216,23 +285,75 @@
   }
 
   @media (max-width: 1366px) {
-    .s15-head { font-size:clamp(2rem,4.5vw,4rem); margin-bottom:1.5rem; }
-    .s15-contrast { gap:1.5rem; margin-bottom:2rem; }
-    .logic-norm, .logic-surv { padding:1rem 1.2rem; }
-    .logic-val { font-size:clamp(0.95rem,1.7vw,1.3rem); }
-    .arrow { font-size:clamp(1.5rem,3vw,2.5rem); }
-    .s15-final { font-size:clamp(1rem,1.9vw,1.35rem); max-width:720px; margin-bottom:1.5rem; line-height:1.7; }
-    .s15-final-bottom { margin-top:1rem; font-size:1em; }
+    .s15-head {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      margin-bottom: 1.5rem;
+    }
+    .s15-contrast {
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .logic-norm,
+    .logic-surv {
+      padding: 1.2rem;
+    }
+    .logic-val {
+      font-size: clamp(0.95rem, 1.7vw, 1.3rem);
+    }
+    .arrow {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .s15-final {
+      font-size: clamp(1rem, 1.9vw, 1.35rem);
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .s15-final-bottom {
+      margin-top: 1rem;
+      font-size: 1em;
+    }
   }
   @media (max-width: 1024px) {
-    .s15-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.8rem; }
-    .s15-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1.2rem; }
-    .s15-contrast { gap:1rem; margin-bottom:1.5rem; }
-    .logic-norm, .logic-surv { padding:0.8rem 1rem; }
-    .logic-label { font-size:clamp(0.75rem,1.3vw,0.9rem); margin-bottom:0.3rem; }
-    .logic-val { font-size:clamp(0.85rem,1.5vw,1.1rem); line-height:1.4; }
-    .arrow { font-size:clamp(1.2rem,2.5vw,2rem); }
-    .s15-final { font-size:clamp(0.85rem,1.6vw,1.15rem); max-width:600px; margin-bottom:1rem; line-height:1.6; }
-    .s15-final-bottom { margin-top:0.8rem; font-size:0.95em; }
+    .s15-label {
+      font-size: clamp(0.75rem, 1.3vw, 1rem);
+      margin-bottom: 0.8rem;
+    }
+    .s15-head {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin-bottom: 1.2rem;
+    }
+    .s15-contrast {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .logic-norm,
+    .logic-surv {
+      padding: 1rem;
+    }
+    .logic-label {
+      font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+      margin-bottom: 0.5rem;
+    }
+    .logic-val {
+      font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+      line-height: 1.4;
+    }
+    .arrow {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      margin: 0.5rem 0;
+    }
+    .s15-final {
+      font-size: clamp(0.85rem, 1.6vw, 1.15rem);
+      max-width: 600px;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .s15-final-bottom {
+      margin-top: 0.8rem;
+      font-size: 0.95em;
+    }
   }
 </style>
