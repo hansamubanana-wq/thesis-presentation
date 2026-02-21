@@ -36,10 +36,19 @@
       ease: "sine.inOut",
       delay: 2.5,
     });
+
+    // Slow background zoom for cinematic feel
+    gsap.fromTo(
+      ".bg-layer",
+      { scale: 1 },
+      { scale: 1.05, duration: 25, ease: "none", repeat: -1, yoyo: true },
+    );
   });
 </script>
 
 <div class="slide">
+  <img src="/images/komoda.jpg" alt="Background" class="bg-layer" />
+
   <p class="s3-year">1274年（文永11年）― 小茂田浜</p>
   <h2 class="s3-head">相容れない二つの道</h2>
 
@@ -84,6 +93,23 @@
     gap: 0;
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
+  }
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: grayscale(40%) sepia(20%);
+    z-index: 0;
+  }
+  .s3-year,
+  .s3-head,
+  .clash,
+  .s3-scroll {
+    position: relative;
+    z-index: 1;
   }
   .s3-year {
     font-size: clamp(0.9rem, 1.6vw, 1.2rem);
