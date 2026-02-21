@@ -22,6 +22,20 @@
   const TOTAL = 16;
   let current = $state(0);
   let transitioning = $state(false);
+  let globalBgUrl = $state("/images/tsushima_landscape.jpg");
+
+  // Slide index to background image mapping
+  const bgMap: Record<number, string> = {
+    1: "/images/bg_evil_def.jpg", // Slide 2
+    2: "/images/bg_evil_def.jpg", // SlideIntro
+    3: "/images/komoda.jpg", // Slide 3
+    8: "/images/ghost_stealth.jpg", // Slide 8
+    11: "/images/tsushima_landscape.jpg", // Slide 11
+    12: "/images/conditions_bg.jpg", // Slide 12
+    13: "/images/ghost_finale.jpg", // Slide 13
+    14: "/images/ghost_finale.jpg", // Slide 15
+    15: "/images/ghost_finale.jpg", // Slide 16
+  };
 
   const slides = [
     Slide1,
@@ -47,6 +61,39 @@
     transitioning = true;
 
     const outEl = document.querySelector(".slide-active") as HTMLElement;
+
+    // Determine new background
+    const newBg = bgMap[next] || "/images/tsushima_landscape.jpg";
+    if (newBg !== globalBgUrl) {
+      // Crossfade background using a temporary element or just GSAP
+      const bgEl = document.querySelector(".global-bg") as HTMLElement;
+      if (bgEl) {
+        gsap.to(bgEl, {
+          opacity: 0,
+          duration: 0.3,
+          onComplete: () => {
+            globalBgUrl = newBg;
+            gsap.to(bgEl, { opacity: 0.12, duration: 0.8 }); // fade back in
+            // Restart background scale animation
+            gsap.killTweensOf(bgEl, "scale");
+            gsap.fromTo(
+              bgEl,
+              { scale: 1 },
+              {
+                scale: 1.05,
+                duration: 30,
+                ease: "none",
+                repeat: -1,
+                yoyo: true,
+              },
+            );
+          },
+        });
+      } else {
+        globalBgUrl = newBg;
+      }
+    }
+
     if (outEl) {
       gsap.to(outEl, {
         opacity: 0,
@@ -95,9 +142,25 @@
 
   onMount(() => {
     window.addEventListener("keydown", handleKey);
+
+    // Initial bg animation
+    const bgEl = document.querySelector(".global-bg") as HTMLElement;
+    if (bgEl) {
+      gsap.fromTo(
+        bgEl,
+        { scale: 1 },
+        { scale: 1.05, duration: 30, ease: "none", repeat: -1, yoyo: true },
+      );
+    }
+
     return () => window.removeEventListener("keydown", handleKey);
   });
 </script>
+
+<!-- Global Background -->
+<div class="global-bg-container">
+  <img src={globalBgUrl} alt="Background" class="global-bg" />
+</div>
 
 <!-- Progress bar -->
 <div class="progress-bar">
@@ -151,6 +214,30 @@
 <div class="counter">{current + 1} / {TOTAL}</div>
 
 <style>
+  :global(.slide) {
+    background: transparent !important;
+  }
+
+  .global-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: #09070a; /* Fallback base color */
+    overflow: hidden;
+  }
+
+  .global-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.12;
+    filter: grayscale(40%) sepia(20%);
+    transform-origin: center;
+  }
+
   .stage {
     width: 100%;
     height: 100%;

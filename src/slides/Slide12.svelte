@@ -42,13 +42,6 @@
 </script>
 
 <div class="slide">
-  <!-- Dynamic Background Image -->
-  <img
-    src="/images/conditions_bg.jpg"
-    alt=""
-    class="bg-texture"
-    onerror={(e) => ((e.target as HTMLElement).style.display = "none")}
-  />
   <div class="glow-bg"></div>
 
   <div class="content">
@@ -90,23 +83,9 @@
   .slide {
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 50% 40%, #0e0c08 0%, #09070a 70%);
-    position: relative;
     overflow: hidden;
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
-  }
-
-  .bg-texture {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.15; /* Keep it subtle */
-    mix-blend-mode: overlay; /* Blends nicely with the dark background */
-    z-index: 1;
-    pointer-events: none;
   }
 
   .glow-bg {
@@ -155,7 +134,6 @@
     align-items: center;
     gap: 2rem;
     padding: 1.5rem 2rem;
-    /* Increase background opacity slightly so text stands out over the new background texture */
     background: rgba(20, 15, 5, 0.7);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(201, 168, 76, 0.25);

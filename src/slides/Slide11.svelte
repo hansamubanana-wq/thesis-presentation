@@ -22,19 +22,10 @@
       { opacity: 0 },
       { opacity: 1, duration: 0.9, delay: 1.5 },
     );
-
-    // Slow background zoom for cinematic feel
-    gsap.fromTo(
-      ".bg-layer",
-      { scale: 1 },
-      { scale: 1.05, duration: 30, ease: "none", repeat: -1, yoyo: true },
-    );
   });
 </script>
 
 <div class="slide">
-  <img src="/images/tsushima_landscape.jpg" alt="Background" class="bg-layer" />
-
   <h2 class="s11-head">法と哲学の答え</h2>
   <div class="two-col">
     <div class="col s11-law">
@@ -57,7 +48,6 @@
   .slide {
     width: 100%;
     height: 100%;
-    background: #09070a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,16 +57,6 @@
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
     gap: 0;
-  }
-  .bg-layer {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.15;
-    filter: grayscale(20%) sepia(10%);
-    z-index: 0;
   }
   .s11-head,
   .two-col,

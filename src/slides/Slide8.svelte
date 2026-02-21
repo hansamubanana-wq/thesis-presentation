@@ -59,19 +59,10 @@
       ease: "sine.inOut",
       delay: 3,
     });
-
-    // Slow background zoom for cinematic feel
-    gsap.fromTo(
-      ".bg-layer",
-      { scale: 1 },
-      { scale: 1.05, duration: 20, ease: "none", repeat: -1, yoyo: true },
-    );
   });
 </script>
 
 <div class="slide">
-  <img src="/images/ghost_stealth.jpg" alt="Background" class="bg-layer" />
-
   <div class="inner">
     <!-- left: machiavelli.jpg 981×1260 縦長ポートレート -->
     <div class="left-img">
@@ -115,7 +106,6 @@
   .slide {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #0b0610, #09070a);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,16 +113,6 @@
     overflow: hidden;
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
-  }
-  .bg-layer {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.12;
-    filter: grayscale(30%);
-    z-index: 0;
   }
   .inner {
     display: flex;

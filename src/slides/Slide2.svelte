@@ -18,19 +18,10 @@
       { scaleX: 0 },
       { scaleX: 1, duration: 1, ease: "power2.out", delay: 1.4 },
     );
-
-    // Slow background zoom for cinematic feel
-    gsap.fromTo(
-      ".bg-layer",
-      { scale: 1 },
-      { scale: 1.05, duration: 20, ease: "none", repeat: -1, yoyo: true },
-    );
   });
 </script>
 
 <div class="slide">
-  <img src="/images/bg_evil_def.jpg" alt="Background" class="bg-layer" />
-
   <p class="s2-sub">研究の背景</p>
   <h2 class="s2-q1">「平時の正義」は</h2>
   <h2 class="s2-q2"><span class="red">非常時</span>にも通用するか？</h2>
@@ -41,7 +32,6 @@
   .slide {
     width: 100%;
     height: 100%;
-    background: #09070a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,16 +40,6 @@
     overflow: hidden;
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
-  }
-  .bg-layer {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.15;
-    filter: grayscale(30%);
-    z-index: 0;
   }
   .s2-sub,
   h2,
