@@ -41,7 +41,7 @@
       <div class="body"><strong>不作為もまた責任</strong>である</div>
     </div>
   </div>
-  <div class="s11-note">対馬 ＝ 沈没しかけた「カルネアデスの板」</div>
+  <div class="s11-note">対馬全体が、誰も助けに来ない「極限状態」であった</div>
 </div>
 
 <style>
