@@ -63,6 +63,14 @@
       delay: 2.5,
     });
 
+    gsap.to(".bg-finale", {
+      scale: 1.05,
+      yoyo: true,
+      repeat: -1,
+      duration: 30, // Very slow zoom for cinematic effect
+      ease: "sine.inOut",
+    });
+
     gsap.to(".arrow", {
       scale: 1.1,
       textShadow: "0 0 20px rgba(200,60,10,0.8)",
@@ -97,6 +105,16 @@
 </script>
 
 <div class="slide">
+  <!-- New Cinematic Background -->
+  <div class="bg-wrapper">
+    <img
+      src="/images/ghost_finale.jpg"
+      alt=""
+      class="bg-finale"
+      onerror={(e) => ((e.target as HTMLElement).style.display = "none")}
+    />
+  </div>
+
   <div class="final-bg"></div>
   <div class="particles" aria-hidden="true">
     {#each Array(16) as _, i}
@@ -107,41 +125,43 @@
     {/each}
   </div>
 
-  <p class="s15-label">結論：「必要悪」は存在するのか</p>
-  <h2 class="s15-head">規範と生存の<span class="gold">ジレンマ</span></h2>
+  <div class="content">
+    <p class="s15-label">結論：「必要悪」は存在するのか</p>
+    <h2 class="s15-head">規範と生存の<span class="gold">ジレンマ</span></h2>
 
-  <div class="s15-contrast">
-    <div class="logic-norm">
-      <div class="logic-label dim">「平時」の論理（規範）</div>
-      <div class="logic-val">
-        社会の秩序を維持するため<br />ルールの遵守は絶対
+    <div class="s15-contrast">
+      <div class="logic-norm">
+        <div class="logic-label dim">「平時」の論理（規範）</div>
+        <div class="logic-val">
+          社会の秩序を維持するため<br />ルールの遵守は絶対
+        </div>
+      </div>
+      <div class="arrow">VS</div>
+      <div class="logic-surv">
+        <div class="logic-label highlight">「非常時」の論理（生存）</div>
+        <div class="logic-val">
+          危機における規範の固守は<br />却って大量の死を招く
+        </div>
       </div>
     </div>
-    <div class="arrow">VS</div>
-    <div class="logic-surv">
-      <div class="logic-label highlight">「非常時」の論理（生存）</div>
-      <div class="logic-val">
-        危機における規範の固守は<br />却って大量の死を招く
-      </div>
-    </div>
+
+    <blockquote class="s15-final">
+      極限状態において、より多くの命を救うという「結果」のために<br />
+      一時的に規範を破る行為（手段としての悪）は<strong>一定の正当性</strong
+      >を持つ。<br />
+      <span class="s15-final-bottom"
+        >ゆえに、境井仁の選択は単なる堕落ではなく、<br
+        />状況に応じた合理的な判断であった。</span
+      >
+    </blockquote>
   </div>
-
-  <blockquote class="s15-final">
-    極限状態において、より多くの命を救うという「結果」のために<br />
-    一時的に規範を破る行為（手段としての悪）は<strong>一定の正当性</strong
-    >を持つ。<br />
-    <span class="s15-final-bottom"
-      >ゆえに、境井仁の選択は単なる堕落ではなく、<br
-      />状況に応じた合理的な判断であった。</span
-    >
-  </blockquote>
 </div>
 
 <style>
   .slide {
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 50% 60%, #120e06, #09070a 65%);
+    background: #09070a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,20 +172,42 @@
     color: #f5f0e8;
     gap: 0;
   }
+
+  .bg-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden; /* For the slow zoom */
+  }
+
+  .bg-finale {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Keep dark to not disrupt text */
+    filter: grayscale(40%) brightness(0.6) contrast(1.2);
+  }
+
   .final-bg {
     position: absolute;
     inset: 0;
+    /* Create a vignette effect so edges are dark */
     background: radial-gradient(
       ellipse at 50% 100%,
-      rgba(201, 168, 76, 0.07) 0%,
-      transparent 55%
+      rgba(201, 168, 76, 0.08) 0%,
+      #09070a 80%
     );
     pointer-events: none;
+    z-index: 2;
   }
   .particles {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 3;
   }
   .end-particle {
     position: absolute;
@@ -175,6 +217,16 @@
     background: #c9a84c;
     box-shadow: 0 0 5px #c9a84c;
   }
+
+  .content {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   .s15-label {
     font-size: clamp(0.9rem, 1.6vw, 1.2rem);
     letter-spacing: 0.25em;
@@ -211,12 +263,14 @@
     transition: transform 0.3s ease;
   }
   .logic-norm {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .logic-surv {
-    background: rgba(139, 26, 26, 0.08);
-    border: 1px solid rgba(139, 26, 26, 0.3);
+    background: rgba(60, 10, 10, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(139, 26, 26, 0.4);
     position: relative;
     overflow: hidden;
   }
@@ -271,6 +325,11 @@
     max-width: 850px;
     font-style: normal;
     margin-bottom: 2rem;
+    background: rgba(10, 8, 5, 0.7);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    backdrop-filter: blur(2px);
   }
   .s15-final strong {
     color: #f5f0e8;
@@ -308,6 +367,7 @@
       max-width: 720px;
       margin-bottom: 1.5rem;
       line-height: 1.7;
+      padding: 1.2rem;
     }
     .s15-final-bottom {
       margin-top: 1rem;
@@ -350,6 +410,7 @@
       max-width: 600px;
       margin-bottom: 1rem;
       line-height: 1.6;
+      padding: 1rem;
     }
     .s15-final-bottom {
       margin-top: 0.8rem;
