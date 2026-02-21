@@ -119,7 +119,7 @@
   }
   li::before {
     content: "—";
-    color: #c9a84c;
+    color: #c0504d; /* Shimura Red */
     flex-shrink: 0;
   }
   strong {

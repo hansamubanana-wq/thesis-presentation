@@ -94,7 +94,7 @@
         <div class="s8-eq op">＝</div>
         <div class="elem s8-ghost">
           <div class="ghost-char">冥</div>
-          <div class="name red">冥人</div>
+          <div class="name blue">冥人</div>
           <div class="sub">境井仁</div>
         </div>
       </div>
@@ -198,7 +198,7 @@
   .ghost-char {
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 900;
-    color: #c0504d;
+    color: #6c7a9c; /* Ghost Blue */
     line-height: 1;
     margin-bottom: 0.5rem;
     display: block;
@@ -221,8 +221,8 @@
   .gold {
     color: #c9a84c;
   }
-  .red {
-    color: #c0504d;
+  .blue {
+    color: #6c7a9c;
   }
 
   @media (max-width: 1366px) {

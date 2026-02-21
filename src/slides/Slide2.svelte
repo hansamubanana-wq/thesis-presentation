@@ -22,7 +22,7 @@
 </script>
 
 <div class="slide">
-  <p class="s2-sub">研究の背景</p>
+  <p class="s2-sub">研究テーマ</p>
   <h2 class="s2-q1">「平時の正義」は</h2>
   <h2 class="s2-q2"><span class="red">非常時</span>にも通用するか？</h2>
   <div class="s2-line"></div>

@@ -81,6 +81,7 @@
       ></span>{/each}
   </div>
 
+  <div class="s1-platform">PlayStation®4 / PlayStation®5用ソフトウェア</div>
   <p class="s1-tag">卒業論文</p>
   <h1 class="s1-title">
     『ゴースト・オブ・ツシマ』<br />と<span class="red">必要悪</span>の倫理学
@@ -148,6 +149,18 @@
       0 0 8px #c0392b,
       0 0 4px #e74c3c;
     opacity: 0; /* Base controlled by GSAP */
+  }
+
+  .s1-platform {
+    position: relative;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    letter-spacing: 0.15em;
+    color: rgba(245, 240, 232, 0.8); /* Noticeable but modest */
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(245, 240, 232, 0.3);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .s1-tag {

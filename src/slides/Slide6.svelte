@@ -26,7 +26,7 @@
 <div class="slide">
   <p class="s6-label">仁の正義</p>
   <h2 class="s6-who">
-    ベンサム<span class="dim">／</span><span class="red">功利主義</span>
+    ベンサム<span class="dim">／</span><span class="blue">功利主義</span>
   </h2>
   <ul>
     <li class="s6-key">正義は<strong>「結果」</strong>のみで決まる</li>
@@ -63,8 +63,8 @@
     margin-bottom: 2.5rem;
     text-align: center;
   }
-  .red {
-    color: #c0504d;
+  .blue {
+    color: #6c7a9c;
   }
   .dim {
     color: rgba(245, 240, 232, 0.25);
@@ -87,7 +87,7 @@
   }
   li::before {
     content: "—";
-    color: #c0504d;
+    color: #6c7a9c; /* Ghost Blue */
     flex-shrink: 0;
   }
   strong {

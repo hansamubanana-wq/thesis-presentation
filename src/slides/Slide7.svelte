@@ -49,12 +49,12 @@
     <div class="s7-beam"></div>
     <div class="pans">
       <div class="pan s7-left">
-        <div class="pan-name gold">義務論</div>
-        <div class="pan-sub">志村の正義<br />「過程・動機」</div>
+        <div class="pan-name blue">功利主義</div>
+        <div class="pan-sub">仁の正義<br />「結果」</div>
       </div>
       <div class="pan s7-right">
-        <div class="pan-name red">功利主義</div>
-        <div class="pan-sub">仁の正義<br />「結果」</div>
+        <div class="pan-name red">義務論</div>
+        <div class="pan-sub">志村の正義<br />「過程・動機」</div>
       </div>
     </div>
   </div>
@@ -128,20 +128,20 @@
     background: rgba(201, 168, 76, 0.4);
   }
   .s7-left {
-    background: rgba(201, 168, 76, 0.07);
-    border: 1px solid rgba(201, 168, 76, 0.25);
+    background: rgba(108, 122, 156, 0.1);
+    border: 1px solid rgba(108, 122, 156, 0.3);
   }
   .s7-right {
-    background: rgba(139, 26, 26, 0.1);
-    border: 1px solid rgba(139, 26, 26, 0.3);
+    background: rgba(192, 80, 77, 0.1);
+    border: 1px solid rgba(192, 80, 77, 0.3);
   }
   .pan-name {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 900;
     margin-bottom: 0.5rem;
   }
-  .gold {
-    color: #c9a84c;
+  .blue {
+    color: #6c7a9c;
   }
   .red {
     color: #c0504d;
