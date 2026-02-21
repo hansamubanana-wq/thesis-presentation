@@ -30,4 +30,14 @@
   .s2-q2 { margin-bottom:3.5rem; }
   .red { color:#c0504d; }
   .s2-line { width:min(500px,70%); height:3px; background:linear-gradient(to right,transparent,#8b1a1a,transparent); transform-origin:left; box-shadow:0 0 12px rgba(139,26,26,0.5); }
+
+  @media (max-width: 1366px) {
+    h2 { font-size:clamp(2.5rem,5.5vw,5rem); }
+    .s2-q2 { margin-bottom:2.5rem; }
+  }
+  @media (max-width: 1024px) {
+    h2 { font-size:clamp(2rem,5vw,4rem); }
+    .s2-sub { font-size:clamp(0.85rem,1.5vw,1.1rem); margin-bottom:2rem; }
+    .s2-q2 { margin-bottom:2rem; }
+  }
 </style>

@@ -214,4 +214,25 @@
     font-weight: 700;
     color: #c9a84c;
   }
+
+  @media (max-width: 1366px) {
+    .s15-head { font-size:clamp(2rem,4.5vw,4rem); margin-bottom:1.5rem; }
+    .s15-contrast { gap:1.5rem; margin-bottom:2rem; }
+    .logic-norm, .logic-surv { padding:1rem 1.2rem; }
+    .logic-val { font-size:clamp(0.95rem,1.7vw,1.3rem); }
+    .arrow { font-size:clamp(1.5rem,3vw,2.5rem); }
+    .s15-final { font-size:clamp(1rem,1.9vw,1.35rem); max-width:720px; margin-bottom:1.5rem; line-height:1.7; }
+    .s15-final-bottom { margin-top:1rem; font-size:1em; }
+  }
+  @media (max-width: 1024px) {
+    .s15-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.8rem; }
+    .s15-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1.2rem; }
+    .s15-contrast { gap:1rem; margin-bottom:1.5rem; }
+    .logic-norm, .logic-surv { padding:0.8rem 1rem; }
+    .logic-label { font-size:clamp(0.75rem,1.3vw,0.9rem); margin-bottom:0.3rem; }
+    .logic-val { font-size:clamp(0.85rem,1.5vw,1.1rem); line-height:1.4; }
+    .arrow { font-size:clamp(1.2rem,2.5vw,2rem); }
+    .s15-final { font-size:clamp(0.85rem,1.6vw,1.15rem); max-width:600px; margin-bottom:1rem; line-height:1.6; }
+    .s15-final-bottom { margin-top:0.8rem; font-size:0.95em; }
+  }
 </style>

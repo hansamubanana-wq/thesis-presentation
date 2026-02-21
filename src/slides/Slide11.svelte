@@ -47,4 +47,20 @@
   .body strong { color:#f5f0e8; }
   .s11-note { font-size:clamp(1.2rem,2.3vw,1.8rem); color:rgba(245,240,232,0.6); text-align:center; }
   .gold { color:#c9a84c; } .red { color:#c0504d; }
+
+  @media (max-width: 1366px) {
+    .s11-head { font-size:clamp(2.5rem,5.5vw,5rem); margin-bottom:2rem; }
+    .col { padding:2rem 1.5rem; }
+    .title { font-size:clamp(1.5rem,3vw,2.2rem); }
+    .body { font-size:clamp(0.95rem,1.7vw,1.3rem); }
+  }
+  @media (max-width: 1024px) {
+    .s11-head { font-size:clamp(2rem,5vw,4rem); margin-bottom:1.5rem; }
+    .two-col { gap:1.2rem; }
+    .col { padding:1.5rem 1.2rem; gap:0.7rem; }
+    .tag { font-size:clamp(0.7rem,1.2vw,0.85rem); }
+    .title { font-size:clamp(1.3rem,2.5vw,1.8rem); }
+    .body { font-size:clamp(0.85rem,1.5vw,1.1rem); }
+    .s11-note { font-size:clamp(1rem,2vw,1.4rem); }
+  }
 </style>

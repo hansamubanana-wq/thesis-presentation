@@ -53,4 +53,20 @@
   .case-sub   { font-size:clamp(1rem,2vw,1.5rem); color:rgba(245,240,232,0.55); }
   .s10-note { font-size:clamp(1.3rem,2.5vw,2rem); color:rgba(245,240,232,0.75); text-align:center; }
   .s10-note strong { color:#c9a84c; }
+
+  @media (max-width: 1366px) {
+    .s10-head { font-size:clamp(2.5rem,5.5vw,5rem); margin-bottom:2rem; }
+    .case { padding:1.3rem 2rem; gap:1.5rem; }
+    .case-title { font-size:clamp(1.2rem,2.5vw,1.8rem); }
+    .case-sub { font-size:clamp(0.9rem,1.7vw,1.2rem); }
+  }
+  @media (max-width: 1024px) {
+    .s10-head { font-size:clamp(2rem,5vw,4rem); margin-bottom:1.5rem; }
+    .case { padding:1rem 1.5rem; gap:1.2rem; }
+    .case-title { font-size:clamp(1rem,2.2vw,1.5rem); }
+    .case-sub { font-size:clamp(0.8rem,1.5vw,1rem); }
+    .cases { gap:0.9rem; margin-bottom:1.8rem; }
+    .s10-note { font-size:clamp(1rem,2vw,1.5rem); }
+    .mark { font-size:clamp(1.5rem,3vw,2.2rem); }
+  }
 </style>

@@ -65,4 +65,20 @@
     box-shadow:0 0 40px rgba(0,0,0,0.6);
   }
   .img-cap { font-size:0.75rem; color:rgba(245,240,232,0.3); text-align:center; line-height:1.5; }
+
+  @media (max-width: 1366px) {
+    .content { gap:2.5rem; }
+    .s5-who { font-size:clamp(2rem,4.5vw,3.5rem); margin-bottom:1.5rem; }
+    li { font-size:clamp(0.95rem,1.8vw,1.4rem); gap:0.7rem; }
+    ul { gap:0.9rem; }
+    .kant-img { width:clamp(160px,20vw,240px); }
+  }
+  @media (max-width: 1024px) {
+    .content { gap:1.5rem; }
+    .s5-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.6rem; }
+    .s5-who { font-size:clamp(1.6rem,4vw,2.8rem); margin-bottom:1rem; }
+    li { font-size:clamp(0.85rem,1.6vw,1.2rem); gap:0.5rem; }
+    ul { gap:0.7rem; }
+    .kant-img { width:clamp(120px,16vw,180px); }
+  }
 </style>

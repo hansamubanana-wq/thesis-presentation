@@ -77,4 +77,22 @@
     box-shadow:0 0 40px rgba(0,0,0,0.6);
   }
   .img-cap { font-size:0.72rem; color:rgba(245,240,232,0.3); text-align:center; line-height:1.6; }
+
+  @media (max-width: 1366px) {
+    .inner { gap:2.5rem; }
+    .s9-head { font-size:clamp(1.8rem,3.8vw,3rem); margin-bottom:2rem; }
+    .nobu-img { width:clamp(160px,20vw,250px); }
+    .body { font-size:clamp(1.2rem,2.5vw,2rem); }
+    .box-bad, .box-good { padding:1.2rem 1.5rem; }
+  }
+  @media (max-width: 1024px) {
+    .inner { gap:1.5rem; }
+    .s9-label { font-size:clamp(0.75rem,1.3vw,1rem); margin-bottom:0.6rem; }
+    .s9-head { font-size:clamp(1.5rem,3.5vw,2.5rem); margin-bottom:1.5rem; }
+    .nobu-img { width:clamp(120px,16vw,180px); }
+    .body { font-size:clamp(1rem,2.2vw,1.6rem); }
+    .tag { font-size:clamp(0.7rem,1.2vw,0.85rem); }
+    .box-bad, .box-good { padding:1rem 1.2rem; }
+    .fire-arr { font-size:2rem; }
+  }
 </style>

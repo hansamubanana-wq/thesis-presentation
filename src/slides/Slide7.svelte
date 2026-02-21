@@ -151,4 +151,15 @@
     color: rgba(245, 240, 232, 0.65);
     line-height: 1.5;
   }
+
+  @media (max-width: 1366px) {
+    .s7-title { font-size:clamp(2rem,4.5vw,4rem); margin-bottom:2rem; }
+    .pan-name { font-size:clamp(1.2rem,2.5vw,2rem); }
+  }
+  @media (max-width: 1024px) {
+    .s7-title { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1.5rem; }
+    .pan { padding:1rem 0.8rem; }
+    .pan-name { font-size:clamp(1rem,2.2vw,1.6rem); }
+    .pan-sub { font-size:clamp(0.75rem,1.4vw,1rem); }
+  }
 </style>

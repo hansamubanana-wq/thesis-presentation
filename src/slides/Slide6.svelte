@@ -40,4 +40,16 @@
   li::before { content:'—'; color:#c0504d; flex-shrink:0; }
   strong { color:#f5f0e8; }
   .verdict { font-size:clamp(1.1rem,2.2vw,1.8rem); font-style:italic; color:#c9a84c; border-left:4px solid #8b1a1a; padding:0.5rem 1.5rem; }
+
+  @media (max-width: 1366px) {
+    .s6-who { font-size:clamp(2.5rem,5.5vw,5rem); margin-bottom:2rem; }
+    li { font-size:clamp(1rem,2vw,1.6rem); }
+    ul { gap:1rem; margin-bottom:2rem; }
+  }
+  @media (max-width: 1024px) {
+    .s6-who { font-size:clamp(2rem,5vw,4rem); margin-bottom:1.5rem; }
+    li { font-size:clamp(0.9rem,1.8vw,1.3rem); gap:0.7rem; }
+    ul { gap:0.8rem; margin-bottom:1.5rem; }
+    .verdict { font-size:clamp(0.9rem,1.8vw,1.3rem); padding:0.4rem 1.2rem; }
+  }
 </style>

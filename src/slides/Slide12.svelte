@@ -161,4 +161,22 @@
   .s12-verdict strong {
     color: #c9a84c;
   }
+
+  @media (max-width: 1366px) {
+    .s12-head { font-size:clamp(2rem,4.5vw,4rem); margin-bottom:2rem; }
+    .cond { padding:1.2rem 1.5rem; gap:1.5rem; }
+    .cond-title { font-size:clamp(1.2rem,2.5vw,1.8rem); }
+    .cond-sub { font-size:clamp(0.9rem,1.7vw,1.2rem); }
+    .conditions { gap:1rem; margin-bottom:2rem; }
+    .s12-verdict { font-size:clamp(1.1rem,2.2vw,1.6rem); padding:1rem 2rem; }
+  }
+  @media (max-width: 1024px) {
+    .s12-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:1.5rem; }
+    .cond { padding:1rem 1.2rem; gap:1.2rem; }
+    .cond-title { font-size:clamp(1rem,2.2vw,1.5rem); }
+    .cond-sub { font-size:clamp(0.8rem,1.5vw,1rem); }
+    .conditions { gap:0.8rem; margin-bottom:1.5rem; }
+    .num { width:2.5rem; height:2.5rem; font-size:1.1rem; }
+    .s12-verdict { font-size:clamp(0.95rem,1.8vw,1.3rem); padding:0.8rem 1.5rem; }
+  }
 </style>
