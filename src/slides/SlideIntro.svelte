@@ -162,26 +162,31 @@
         position: absolute;
         inset: 0;
         z-index: 1;
-        opacity: 0.3;
+        opacity: 0.5; /* Increased opacity so the portrait is visible */
         transition:
             opacity 0.5s ease,
             transform 0.5s ease;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
     }
 
     /* Jin: Stealth, Dark Blue/Ghostly Colors */
     .jn-bg {
-        background: linear-gradient(135deg, #0a1128 0%, #1a1e29 100%);
-        box-shadow: inset 0 0 100px #000;
+        background-color: #1a1e29;
+        background-image: url("/images/jin_portrait.jpg");
+        box-shadow: inset 0 0 120px #000;
     }
 
     /* Shimura: Honor, Crimson/Gold */
     .sm-bg {
-        background: linear-gradient(135deg, #3a0d0d 0%, #1a0808 100%);
-        box-shadow: inset 0 0 100px #000;
+        background-color: #1a0808;
+        background-image: url("/images/shimura_portrait.jpg");
+        box-shadow: inset 0 0 120px #000;
     }
 
     .char-box:hover .char-bg {
-        opacity: 0.6;
+        opacity: 0.8;
         transform: scale(1.05);
     }
 
