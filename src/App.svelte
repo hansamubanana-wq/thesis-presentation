@@ -26,15 +26,22 @@
 
   // Slide index to background image mapping
   const bgMap: Record<number, string> = {
-    1: "/images/bg_evil_def.jpg", // Slide 2
-    2: "/images/bg_evil_def.jpg", // SlideIntro
-    3: "/images/komoda.jpg", // Slide 3
-    8: "/images/ghost_stealth.jpg", // Slide 8
-    11: "/images/tsushima_landscape.jpg", // Slide 11
-    12: "/images/conditions_bg.jpg", // Slide 12
-    13: "/images/ghost_finale.jpg", // Slide 13
-    14: "/images/ghost_finale.jpg", // Slide 15
-    15: "/images/ghost_finale.jpg", // Slide 16
+    0: "/images/title.jpg",
+    1: "/images/bg_slide2.jpg",
+    2: "/images/bg_slide3.jpg",
+    3: "/images/bg_slide4.jpg",
+    4: "/images/bg_slide5.jpg",
+    5: "/images/bg_slide6.jpg",
+    6: "/images/bg_slide7.jpg",
+    7: "/images/bg_slide8.jpg",
+    8: "/images/bg_slide9.jpg",
+    9: "/images/bg_slide10.jpg",
+    10: "/images/bg_slide11.jpg",
+    11: "/images/bg_slide12.jpg",
+    12: "/images/bg_slide13.jpg",
+    13: "/images/bg_slide14.jpg",
+    14: "/images/bg_slide15.jpg",
+    15: "/images/bg_slide16.jpg",
   };
 
   const slides = [
