@@ -15,9 +15,9 @@
   import Slide11 from "./slides/Slide11.svelte";
   import Slide12 from "./slides/Slide12.svelte";
   import Slide13 from "./slides/Slide13.svelte";
-  import Slide14 from "./slides/Slide14.svelte";
   import Slide15 from "./slides/Slide15.svelte";
   import Slide16 from "./slides/Slide16.svelte";
+  import SlideIntro from "./slides/SlideIntro.svelte";
 
   const TOTAL = 16;
   let current = $state(0);
@@ -26,6 +26,7 @@
   const slides = [
     Slide1,
     Slide2,
+    SlideIntro,
     Slide3,
     Slide4,
     Slide5,
@@ -37,7 +38,6 @@
     Slide11,
     Slide12,
     Slide13,
-    Slide14,
     Slide15,
     Slide16,
   ];
@@ -260,16 +260,40 @@
 
   /* iPad / tablet touch-friendly adjustments */
   @media (max-width: 1366px) {
-    .dot { width: 8px; height: 8px; }
-    .arrow { font-size: 1rem; padding: 0.6rem 0.8rem; }
-    .progress-dots { gap: 0.5rem; bottom: 1.2rem; }
+    .dot {
+      width: 8px;
+      height: 8px;
+    }
+    .arrow {
+      font-size: 1rem;
+      padding: 0.6rem 0.8rem;
+    }
+    .progress-dots {
+      gap: 0.5rem;
+      bottom: 1.2rem;
+    }
   }
   @media (max-width: 1024px) {
-    .dot { width: 10px; height: 10px; }
-    .dot.active { transform: scale(1.3); }
-    .arrow { font-size: 0.9rem; padding: 0.5rem 0.7rem; }
-    .arrow-left { left: 0.5rem; }
-    .arrow-right { right: 0.5rem; }
-    .progress-dots { gap: 0.4rem; bottom: 1rem; }
+    .dot {
+      width: 10px;
+      height: 10px;
+    }
+    .dot.active {
+      transform: scale(1.3);
+    }
+    .arrow {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7rem;
+    }
+    .arrow-left {
+      left: 0.5rem;
+    }
+    .arrow-right {
+      right: 0.5rem;
+    }
+    .progress-dots {
+      gap: 0.4rem;
+      bottom: 1rem;
+    }
   }
 </style>
