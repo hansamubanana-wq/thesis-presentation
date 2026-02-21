@@ -41,7 +41,10 @@
       <div class="body"><strong>不作為もまた責任</strong>である</div>
     </div>
   </div>
-  <div class="s11-note">対馬全体が、誰も助けに来ない「極限状態」であった</div>
+  <div class="s11-note">
+    <span class="blue">法は「結果」を許容</span>するが、
+    <span class="red">哲学は「過程」の責任</span>を問い続ける
+  </div>
 </div>
 
 <style>
