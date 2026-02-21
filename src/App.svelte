@@ -11,15 +11,13 @@
   import Slide7 from "./slides/Slide7.svelte";
   import Slide8 from "./slides/Slide8.svelte";
   import Slide9 from "./slides/Slide9.svelte";
-  import Slide10 from "./slides/Slide10.svelte";
   import Slide11 from "./slides/Slide11.svelte";
   import Slide12 from "./slides/Slide12.svelte";
-  import Slide13 from "./slides/Slide13.svelte";
   import Slide15 from "./slides/Slide15.svelte";
   import Slide16 from "./slides/Slide16.svelte";
   import SlideIntro from "./slides/SlideIntro.svelte";
 
-  const TOTAL = 16;
+  const TOTAL = 14;
   let current = $state(0);
   let transitioning = $state(false);
   let globalBgUrl = $state("/images/tsushima_landscape.jpg");
@@ -30,18 +28,17 @@
     1: "/images/bg_slide2.jpg",
     2: "/images/bg_slide3.jpg",
     3: "/images/bg_slide4.jpg",
-    4: "/images/bg_slide5.jpg",
-    5: "/images/bg_slide6.jpg",
+    4: "/images/bg_slide6.jpg", // Bentham
+    5: "/images/bg_slide5.jpg", // Kant
     6: "/images/bg_slide7.jpg",
     7: "/images/bg_slide8.jpg",
     8: "/images/bg_slide9.jpg",
-    9: "/images/bg_slide10.jpg",
-    10: "/images/bg_slide11.jpg",
-    11: "/images/bg_slide12.jpg",
-    12: "/images/bg_slide13.jpg",
-    13: "/images/bg_slide14.jpg",
-    14: "/images/bg_slide15.jpg",
-    15: "/images/bg_slide16.jpg",
+    // 9 was Slide 10 (Trolley)
+    9: "/images/bg_slide11.jpg",
+    10: "/images/bg_slide12.jpg",
+    // 12 was Slide 13 (Arendt)
+    11: "/images/bg_slide15.jpg",
+    12: "/images/bg_slide16.jpg",
   };
 
   const slides = [
@@ -50,15 +47,13 @@
     SlideIntro,
     Slide3,
     Slide4,
-    Slide5,
     Slide6,
+    Slide5,
     Slide7,
     Slide8,
     Slide9,
-    Slide10,
     Slide11,
     Slide12,
-    Slide13,
     Slide15,
     Slide16,
   ];

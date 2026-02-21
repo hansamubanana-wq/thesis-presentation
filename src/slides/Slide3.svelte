@@ -44,18 +44,16 @@
   <h2 class="s3-head">相容れない二つの道</h2>
 
   <div class="clash">
-    <div class="box s3-left gold-box">
-      <div class="icon">⚔</div>
-      <div class="box-title">武士道</div>
-      <div class="box-sub">一騎打ち・名乗り・誉れ</div>
+    <div class="box s3-left blue-box">
+      <div class="icon">🔥</div>
+      <div class="box-title">蒙古軍</div>
+      <div class="box-sub">毒矢・集団戦・火薬兵器</div>
     </div>
     <div class="s3-vs">VS</div>
     <div class="box s3-right red-box">
-      <div class="icon">🔥</div>
-      <div class="box-title" style="font-size: clamp(1rem,2vw,1.6rem);">
-        手段を選ばない戦い方
-      </div>
-      <div class="box-sub">毒矢・集団戦・火薬兵器</div>
+      <div class="icon">⚔</div>
+      <div class="box-title">武士</div>
+      <div class="box-sub">一騎打ち・名乗り・誉れ</div>
     </div>
   </div>
 
@@ -115,9 +113,9 @@
     text-align: center;
     min-width: 220px;
   }
-  .gold-box {
-    background: rgba(201, 168, 76, 0.08);
-    border: 1px solid rgba(201, 168, 76, 0.3);
+  .blue-box {
+    background: rgba(108, 122, 156, 0.12);
+    border: 1px solid rgba(108, 122, 156, 0.4);
   }
   .red-box {
     background: rgba(139, 26, 26, 0.12);
@@ -132,8 +130,8 @@
     font-weight: 900;
     margin-bottom: 0.5rem;
   }
-  .gold-box .box-title {
-    color: #c9a84c;
+  .blue-box .box-title {
+    color: #6c7a9c;
   }
   .red-box .box-title {
     color: #c0504d;

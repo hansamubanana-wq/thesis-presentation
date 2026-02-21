@@ -29,14 +29,14 @@
   <h2 class="s11-head">法と哲学の答え</h2>
   <div class="two-col">
     <div class="col s11-law">
-      <div class="tag">刑法第37条</div>
-      <div class="title gold">緊急避難</div>
+      <div class="tag blue">刑法第37条</div>
+      <div class="title blue">緊急避難</div>
       <div class="body">
         より大きな被害を防ぐためなら<strong>罰しない</strong>
       </div>
     </div>
     <div class="col s11-dirty">
-      <div class="tag">M.ウォルツァー</div>
+      <div class="tag red">M.ウォルツァー</div>
       <div class="title red">ダーティ・ハンズ</div>
       <div class="body"><strong>不作為もまた責任</strong>である</div>
     </div>
@@ -115,8 +115,8 @@
     color: rgba(245, 240, 232, 0.6);
     text-align: center;
   }
-  .gold {
-    color: #c9a84c;
+  .blue {
+    color: #6c7a9c;
   }
   .red {
     color: #c0504d;

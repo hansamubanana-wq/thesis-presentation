@@ -13,51 +13,72 @@
       { opacity: 0, x: -60 },
       { opacity: 1, x: 0, duration: 1, ease: "power2.out", delay: 0.6 },
     );
+
+    // Animate base traits coming from the sides
     gsap.fromTo(
       ".s8-lion",
-      { opacity: 0, x: 60, scale: 0.8 },
+      { opacity: 0, x: -50, y: -20 },
       {
         opacity: 1,
         x: 0,
-        scale: 1,
+        y: 0,
         duration: 0.8,
-        ease: "back.out(1.5)",
+        ease: "back.out(1.2)",
         delay: 1,
       },
     );
     gsap.fromTo(
-      ".s8-plus",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.4, delay: 1.5 },
-    );
-    gsap.fromTo(
       ".s8-fox",
-      { opacity: 0, scale: 0.8 },
+      { opacity: 0, x: 50, y: -20 },
       {
         opacity: 1,
-        scale: 1,
+        x: 0,
+        y: 0,
         duration: 0.8,
-        ease: "back.out(1.5)",
-        delay: 1.6,
+        ease: "back.out(1.2)",
+        delay: 1.3,
+      },
+    );
+
+    // Animate the connection arrows
+    gsap.fromTo(
+      ".merge-arrows path",
+      { strokeDasharray: "0 100" },
+      {
+        strokeDasharray: "100 0",
+        duration: 1,
+        ease: "power2.inOut",
+        delay: 1.8,
       },
     );
     gsap.fromTo(
-      ".s8-eq",
+      ".merge-arrows",
       { opacity: 0 },
-      { opacity: 1, duration: 0.4, delay: 2 },
+      { opacity: 1, duration: 0.5, delay: 1.8 },
     );
+
+    // Animate the final result (Ghost)
     gsap.fromTo(
       ".s8-ghost",
-      { opacity: 0, scale: 1.3 },
-      { opacity: 1, scale: 1, duration: 0.9, ease: "power2.out", delay: 2.1 },
+      { opacity: 0, scale: 0.8, y: 30 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        ease: "back.out(1.5)",
+        delay: 2.2,
+      },
     );
+
     gsap.to(".s8-ghost", {
-      textShadow: "0 0 40px rgba(192,80,77,1)",
+      boxShadow: "0 0 50px rgba(108, 122, 156, 0.4)",
+      borderColor: "rgba(108, 122, 156, 0.8)",
       repeat: -1,
       yoyo: true,
-      duration: 1.8,
+      duration: 2,
       ease: "sine.inOut",
-      delay: 3,
+      delay: 3.5,
     });
   });
 </script>
@@ -79,23 +100,62 @@
     <div class="right">
       <p class="s8-label">マキャベリズム ― 君主論</p>
       <h2 class="s8-head">理想の君主とは何か</h2>
-      <div class="formula">
-        <div class="elem s8-lion">
-          <div class="emo">🦁</div>
-          <div class="name gold">ライオン</div>
-          <div class="sub">力・恐怖</div>
+
+      <div class="fusion-layout">
+        <div class="base-traits">
+          <div class="elem s8-lion">
+            <div class="emo">🦁</div>
+            <div class="name gold">ライオン</div>
+            <div class="sub">力・恐怖</div>
+          </div>
+
+          <div class="elem s8-fox">
+            <div class="emo">🦊</div>
+            <div class="name" style="color:#c9884c">狐</div>
+            <div class="sub">知恵・欺瞞</div>
+          </div>
         </div>
-        <div class="s8-plus op">＋</div>
-        <div class="elem s8-fox">
-          <div class="emo">🦊</div>
-          <div class="name" style="color:#c9884c">狐</div>
-          <div class="sub">知恵・欺瞞</div>
-        </div>
-        <div class="s8-eq op">＝</div>
+
+        <svg
+          class="merge-arrows"
+          viewBox="0 0 200 60"
+          preserveAspectRatio="none"
+        >
+          <!-- Left arrow -->
+          <path
+            d="M 50,0 Q 50,40 95,55"
+            fill="none"
+            stroke="rgba(245, 240, 232, 0.3)"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <polygon points="95,55 85,50 88,60" fill="rgba(245, 240, 232, 0.3)" />
+
+          <!-- Right arrow -->
+          <path
+            d="M 150,0 Q 150,40 105,55"
+            fill="none"
+            stroke="rgba(245, 240, 232, 0.3)"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <polygon
+            points="105,55 115,50 112,60"
+            fill="rgba(245, 240, 232, 0.3)"
+          />
+        </svg>
+
         <div class="elem s8-ghost">
-          <div class="ghost-char">冥</div>
-          <div class="name blue">冥人</div>
-          <div class="sub">境井仁</div>
+          <div class="ghost-header">
+            <div class="ghost-char">冥</div>
+            <div class="name blue">
+              <ruby>冥人<rt>くろうど</rt></ruby>（境井仁）
+            </div>
+          </div>
+          <div class="ghost-desc">
+            「誉れ」を捨て、対馬を救うための<br />
+            最強にして非情なる存在
+          </div>
         </div>
       </div>
     </div>
@@ -165,19 +225,47 @@
   .s8-head {
     font-size: clamp(2rem, 4.5vw, 3.8rem);
     font-weight: 900;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
 
-  .formula {
+  /* New Fusion Layout */
+  .fusion-layout {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
   }
+  .base-traits {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+  }
+  .merge-arrows {
+    opacity: 0;
+    width: 15vw;
+    height: 50px;
+    margin: 0.5rem 0;
+    overflow: visible;
+  }
+
   .elem {
     text-align: center;
-    padding: 1.5rem 2rem;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Top boxes */
+  .s8-lion,
+  .s8-fox {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    opacity: 0;
   }
   .s8-lion {
     background: rgba(201, 168, 76, 0.08);
@@ -187,37 +275,57 @@
     background: rgba(176, 112, 48, 0.1);
     border: 1px solid rgba(176, 112, 48, 0.3);
   }
+
+  /* Bottom big box (Ghost) */
   .s8-ghost {
-    background: rgba(139, 26, 26, 0.12);
-    border: 1px solid rgba(139, 26, 26, 0.4);
+    opacity: 0;
+    background: rgba(108, 122, 156, 0.12);
+    border: 2px solid rgba(108, 122, 156, 0.4);
+    padding: 2rem;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
+  .ghost-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   .emo {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 0.5rem;
   }
   .ghost-char {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(3.5rem, 6vw, 5rem);
     font-weight: 900;
     color: #6c7a9c; /* Ghost Blue */
     line-height: 1;
-    margin-bottom: 0.5rem;
-    display: block;
+    text-shadow: 0 0 20px rgba(108, 122, 156, 0.3);
   }
   .name {
-    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
     font-weight: 900;
     margin-bottom: 0.3rem;
   }
-  .sub {
-    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-    color: rgba(245, 240, 232, 0.55);
-  }
-  .op {
+  .s8-ghost .name {
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-    font-weight: 300;
-    color: rgba(245, 240, 232, 0.3);
-    flex-shrink: 0;
+    margin: 0;
+    letter-spacing: 0.1em;
   }
+  .sub {
+    font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+    color: rgba(245, 240, 232, 0.6);
+  }
+  .ghost-desc {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: rgba(245, 240, 232, 0.8);
+    line-height: 1.6;
+    border-top: 1px solid rgba(108, 122, 156, 0.3);
+    padding-top: 1rem;
+    width: 100%;
+  }
+
   .gold {
     color: #c9a84c;
   }
@@ -236,26 +344,11 @@
       font-size: clamp(1.8rem, 3.8vw, 3rem);
       margin-bottom: 2rem;
     }
-    .formula {
-      gap: 1rem;
+    .s8-ghost {
+      padding: 1.5rem;
     }
-    .elem {
-      padding: 1rem 1.5rem;
-    }
-    .emo {
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-    }
-    .ghost-char {
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-    }
-    .name {
-      font-size: clamp(0.95rem, 1.7vw, 1.3rem);
-    }
-    .sub {
-      font-size: clamp(0.75rem, 1.3vw, 0.95rem);
-    }
-    .op {
-      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+    .merge-arrows {
+      height: 40px;
     }
   }
   @media (max-width: 1024px) {
@@ -273,28 +366,21 @@
       font-size: clamp(1.5rem, 3.5vw, 2.5rem);
       margin-bottom: 1.5rem;
     }
-    .formula {
-      gap: 0.8rem;
-    }
     .elem {
-      padding: 0.8rem 1rem;
+      padding: 1rem;
     }
-    .emo {
-      font-size: clamp(1.3rem, 2.5vw, 2rem);
-      margin-bottom: 0.3rem;
+    .s8-lion,
+    .s8-fox {
+      padding: 1rem 0.5rem;
     }
-    .ghost-char {
-      font-size: clamp(1.3rem, 2.5vw, 2rem);
-      margin-bottom: 0.3rem;
+    .ghost-header {
+      gap: 1rem;
     }
-    .name {
+    .ghost-desc {
       font-size: clamp(0.85rem, 1.5vw, 1.1rem);
     }
-    .sub {
-      font-size: clamp(0.7rem, 1.2vw, 0.85rem);
-    }
-    .op {
-      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    .merge-arrows {
+      height: 30px;
     }
   }
 </style>

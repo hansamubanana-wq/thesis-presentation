@@ -34,8 +34,7 @@
     <div class="left">
       <p class="s5-label">志村の正義</p>
       <h2 class="s5-who">
-        カント<span class="dim">／</span><span class="gold">「信念」の正義</span
-        >
+        カント<span class="dim">／</span><span class="red">義務論</span>
       </h2>
       <ul>
         <li class="s5-key">正義は<strong>「動機・過程」</strong>で決まる</li>
@@ -96,8 +95,8 @@
     font-weight: 900;
     margin-bottom: 2rem;
   }
-  .gold {
-    color: #c9a84c;
+  .red {
+    color: #c0504d;
   }
   .dim {
     color: rgba(245, 240, 232, 0.25);
@@ -141,7 +140,7 @@
     object-fit: cover;
     object-position: center top;
     border-radius: 4px;
-    border: 2px solid rgba(201, 168, 76, 0.3);
+    border: 2px solid rgba(192, 80, 77, 0.3);
     filter: grayscale(20%) sepia(10%);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   }

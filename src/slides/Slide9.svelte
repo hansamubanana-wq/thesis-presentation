@@ -40,20 +40,22 @@
 </script>
 
 <div class="slide">
-  <div class="fire-bg"></div>
+  <div class="ghost-bg"></div>
   <div class="inner">
     <!-- left: content -->
     <div class="left">
       <p class="s9-label">歴史的必要悪</p>
-      <h2 class="s9-head">織田信長<br />比叡山焼き討ち（1571）</h2>
+      <h2 class="s9-head">
+        織田信長<br /><span class="blue">比叡山焼き討ち</span>（1571）
+      </h2>
       <div class="flow">
         <div class="s9-means box-bad">
           <div class="tag blue">手段（悪）</div>
           <div class="body">数千人を虐殺</div>
         </div>
-        <div class="s9-arrow fire-arr">↓</div>
+        <div class="s9-arrow ghost-arr">↓</div>
         <div class="s9-result box-good">
-          <div class="tag gold">結果（善）</div>
+          <div class="tag blue">結果（善）</div>
           <div class="body">戦国乱世を終結へ</div>
         </div>
       </div>
@@ -85,12 +87,12 @@
     font-family: "Noto Serif JP", serif;
     color: #f5f0e8;
   }
-  .fire-bg {
+  .ghost-bg {
     position: absolute;
     inset: 0;
     background: radial-gradient(
       ellipse at 50% 80%,
-      rgba(200, 60, 10, 0.1) 0%,
+      rgba(108, 122, 156, 0.15) 0%,
       transparent 60%
     );
     pointer-events: none;
@@ -139,8 +141,8 @@
     border: 1px solid rgba(108, 122, 156, 0.35);
   }
   .box-good {
-    background: rgba(201, 168, 76, 0.07);
-    border: 1px solid rgba(201, 168, 76, 0.25);
+    background: rgba(108, 122, 156, 0.05);
+    border: 1px solid rgba(108, 122, 156, 0.25);
   }
   .tag {
     font-size: clamp(0.8rem, 1.4vw, 1rem);
@@ -152,13 +154,10 @@
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 900;
   }
-  .fire-arr {
+  .ghost-arr {
     font-size: 2.5rem;
-    color: rgba(200, 60, 10, 0.7);
+    color: rgba(108, 122, 156, 0.8);
     padding-left: 1rem;
-  }
-  .gold {
-    color: #c9a84c;
   }
   .blue {
     color: #6c7a9c;
@@ -177,7 +176,7 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 4px;
-    border: 1px solid rgba(200, 60, 10, 0.35);
+    border: 1px solid rgba(108, 122, 156, 0.4);
     filter: grayscale(20%) sepia(20%);
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   }
@@ -232,7 +231,7 @@
     .box-good {
       padding: 1rem 1.2rem;
     }
-    .fire-arr {
+    .ghost-arr {
       font-size: 2rem;
     }
   }
