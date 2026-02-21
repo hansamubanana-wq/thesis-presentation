@@ -29,7 +29,7 @@
   <p class="s4-sub">解けない難問</p>
   <h2 class="s4-main">究極の決断</h2>
   <div class="s4-eq">
-    <span class="eq-a">「誉れある戦いに固執する」</span>
+    <span class="eq-a">「武士道ある戦いに固執する」</span>
     <span class="eq-sym">＝</span>
     <span class="eq-b">「民を見殺しにする」</span>
   </div>

@@ -53,7 +53,7 @@
     <div class="box s3-right red-box">
       <div class="icon">⚔</div>
       <div class="box-title">武士</div>
-      <div class="box-sub">一騎打ち・名乗り・誉れ</div>
+      <div class="box-sub">一騎打ち・名乗り・武士道</div>
     </div>
   </div>
 

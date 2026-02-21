@@ -59,7 +59,7 @@
         </li>
         <li class="s6-key">手段がどれほど「悪」でも、結果が善なら善</li>
       </ul>
-      <div class="verdict">「民が死んでしまっては、誉れも何もない」</div>
+      <div class="verdict">「民が死んでしまっては、武士道も何もない」</div>
     </div>
   </div>
 </div>
