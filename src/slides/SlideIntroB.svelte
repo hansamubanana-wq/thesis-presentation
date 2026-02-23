@@ -11,34 +11,34 @@
             { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
         )
             .fromTo(
-                ".char-jn",
-                { opacity: 0, x: -50, filter: "blur(10px)" },
-                {
-                    opacity: 1,
-                    x: 0,
-                    filter: "blur(0px)",
-                    duration: 1,
-                    ease: "power3.out",
-                },
-                "-=0.4",
-            )
-            .fromTo(
-                ".char-sm",
-                { opacity: 0, x: 50, filter: "blur(10px)" },
-                {
-                    opacity: 1,
-                    x: 0,
-                    filter: "blur(0px)",
-                    duration: 1,
-                    ease: "power3.out",
-                },
+                ".char-name",
+                { y: 80 },
+                { y: 0, duration: 1, ease: "power3.out" },
                 "-=0.6",
             )
             .fromTo(
-                ".vs-badge",
-                { scale: 0, rotation: -180 },
-                { scale: 1, rotation: 0, duration: 0.6, ease: "back.out(1.5)" },
+                ".intro-quote",
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "power2.out",
+                },
                 "-=0.4",
+            )
+            .fromTo(
+                ".vs-badge",
+                { opacity: 0, scale: 0, rotation: -45 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    rotation: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.7)",
+                },
+                "-=0.8",
             );
 
         // Subtle continuous floating
@@ -60,7 +60,11 @@
 </script>
 
 <div class="slide">
-    <h2 class="intro-head">物語の核心：相容れない二つの道</h2>
+    <h2 class="intro-head">
+        <span class="jin-text">結果</span>か<span class="shimura-text"
+            >過程</span
+        >か
+    </h2>
 
     <div class="split-container">
         <!-- Jin Sakai -->
@@ -82,10 +86,14 @@
         <!-- Lord Shimura -->
         <div class="char-box char-sm">
             <div class="char-bg sm-bg"></div>
-            <div class="char-content">
-                <h4 class="char-name shimura-text">
-                    仁の育ての叔父：志村
-                </h4>
+            <div class="char-content right-align">
+                <h4 class="char-name shimura-text">仁の育ての叔父：志村</h4>
+                <blockquote class="intro-quote shimura-quote">
+                    『誉れを失えば、守るべき国もまた失われる』
+                </blockquote>
+                <blockquote class="intro-quote shimura-quote">
+                    正義：過程こそ正義
+                </blockquote>
             </div>
         </div>
     </div>
@@ -203,16 +211,35 @@
         border-left: 4px solid;
     }
 
+    .right-align .intro-quote {
+        padding-left: 0;
+        padding-right: 1rem;
+        border-left: none;
+        border-right: 4px solid;
+        text-align: right;
+    }
+
+    .right-align .char-name {
+        justify-content: flex-end;
+    }
+
     .jin-quote {
         color: #e6e6e6;
         border-color: #5b9bd5;
     }
 
-    .char-name.jin-text {
+    /* Override the generic border-right color for Shimura */
+    .shimura-quote {
+        color: #e6e6e6;
+        border-color: #c0504d;
+        border-right-color: #c0504d;
+    }
+
+    .jin-text {
         color: #5b9bd5; /* 境井仁（青） */
     }
 
-    .char-name.shimura-text {
+    .shimura-text {
         color: #c0504d; /* 志村（赤） */
     }
 
@@ -221,20 +248,23 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        background: #09070a;
-        border: 2px solid #8b1a1a;
-        color: #c9a84c;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
+        background: #0e0c12;
+        border: 2px solid #c9a84c;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 3rem;
         font-weight: 900;
         font-style: italic;
+        color: #c9a84c;
         z-index: 10;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        box-shadow:
+            0 0 30px rgba(201, 168, 76, 0.4),
+            inset 0 0 15px rgba(201, 168, 76, 0.2);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
 
     @media (max-width: 1024px) {

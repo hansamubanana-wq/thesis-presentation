@@ -101,15 +101,26 @@
     }
 
     if (outEl) {
-      gsap.to(outEl, {
-        opacity: 0,
-        duration: 0.35,
-        ease: "power2.in",
-        onComplete: () => {
-          current = next;
-          transitioning = false;
-        },
-      });
+      // Create a seamless transition condition
+      // Slides: 3 is SlideIntroA, 4 is SlideIntroB
+      const isSeamless =
+        (current === 3 && next === 4) || (current === 4 && next === 3);
+
+      if (isSeamless) {
+        // Skip fade out, just switch immediately
+        current = next;
+        transitioning = false;
+      } else {
+        gsap.to(outEl, {
+          opacity: 0,
+          duration: 0.35,
+          ease: "power2.in",
+          onComplete: () => {
+            current = next;
+            transitioning = false;
+          },
+        });
+      }
     } else {
       current = next;
       transitioning = false;
