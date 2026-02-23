@@ -4,7 +4,6 @@
 
   import Slide1 from "./slides/Slide1.svelte";
   import Slide2 from "./slides/Slide2.svelte";
-  import Slide3 from "./slides/Slide3.svelte";
   import Slide4 from "./slides/Slide4.svelte";
   import Slide5 from "./slides/Slide5.svelte";
   import Slide6 from "./slides/Slide6.svelte";
@@ -15,37 +14,42 @@
   import Slide12 from "./slides/Slide12.svelte";
   import Slide15 from "./slides/Slide15.svelte";
   import Slide16 from "./slides/Slide16.svelte";
-  import SlideIntro from "./slides/SlideIntro.svelte";
+  import SlideIntroA from "./slides/SlideIntroA.svelte";
+  import SlideIntroB from "./slides/SlideIntroB.svelte";
+  import SlideMongolVideo from "./slides/SlideMongolVideo.svelte";
+  import SlideConflictVideo from "./slides/SlideConflictVideo.svelte";
 
-  const TOTAL = 14;
+  const TOTAL = 16;
   let current = $state(0);
   let transitioning = $state(false);
   let globalBgUrl = $state("/images/tsushima_landscape.jpg");
 
-  // Slide index to background image mapping
   const bgMap: Record<number, string> = {
     0: "/images/title.jpg",
     1: "/images/bg_slide2.jpg",
-    2: "/images/bg_slide3.jpg",
-    3: "/images/bg_slide4.jpg",
-    4: "/images/bg_slide6.jpg", // Bentham
-    5: "/images/bg_slide5.jpg", // Kant
-    6: "/images/bg_slide7.jpg",
-    7: "/images/bg_slide8.jpg",
-    8: "/images/bg_slide9.jpg",
-    // 9 was Slide 10 (Trolley)
-    9: "/images/bg_slide11.jpg",
-    10: "/images/bg_slide12.jpg",
-    // 12 was Slide 13 (Arendt)
-    11: "/images/bg_slide15.jpg",
-    12: "/images/bg_slide16.jpg",
+    2: "", // Mongol Video Slide (Background handled by video)
+    3: "", // Intro Slide A
+    4: "", // Intro Slide B
+    5: "", // Conflict Video Slide
+    6: "/images/bg_slide4.jpg",
+    7: "/images/bg_slide6.jpg", // Bentham
+    8: "/images/bg_slide5.jpg", // Kant
+    9: "/images/bg_slide7.jpg",
+    10: "/images/bg_slide8.jpg",
+    11: "/images/bg_slide9.jpg",
+    12: "/images/bg_slide11.jpg",
+    13: "/images/bg_slide12.jpg",
+    14: "/images/bg_slide15.jpg",
+    15: "/images/bg_slide16.jpg",
   };
 
   const slides = [
     Slide1,
     Slide2,
-    SlideIntro,
-    Slide3,
+    SlideMongolVideo,
+    SlideIntroA,
+    SlideIntroB,
+    SlideConflictVideo,
     Slide4,
     Slide6,
     Slide5,
