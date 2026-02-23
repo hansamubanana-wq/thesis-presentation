@@ -62,7 +62,6 @@
             bind:this={videoElement}
             class="bg-video"
             src="/videos/conflict_scene.mp4"
-            loop
             playsinline
             autoplay
             controls

@@ -229,7 +229,7 @@
     }
 
     /* Override the generic border-right color for Shimura */
-    .shimura-quote {
+    .right-align .shimura-quote {
         color: #e6e6e6;
         border-color: #c0504d;
         border-right-color: #c0504d;

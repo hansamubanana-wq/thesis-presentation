@@ -3,7 +3,6 @@
     import { gsap } from "gsap";
 
     let videoElement: HTMLVideoElement;
-    let audioCtx: AudioContext | null = null;
 
     onMount(() => {
         // Fade in the video overlay gently
@@ -14,42 +13,10 @@
         );
 
         if (videoElement) {
-            // Ensure muted is false and volume is max
-            videoElement.muted = false;
-            videoElement.volume = 1.0;
-
-            // Setup audio amplification on first play to ensure user interacted
-            videoElement.onplay = () => {
-                if (!audioCtx) {
-                    const AudioContextFunc =
-                        window.AudioContext ||
-                        (window as any).webkitAudioContext;
-                    audioCtx = new AudioContextFunc();
-
-                    const sourceNode =
-                        audioCtx.createMediaElementSource(videoElement);
-                    const gainNode = audioCtx.createGain();
-
-                    // Boost volume 3.5x
-                    gainNode.gain.value = 3.5;
-
-                    sourceNode.connect(gainNode);
-                    gainNode.connect(audioCtx.destination);
-                }
-
-                if (audioCtx && audioCtx.state === "suspended") {
-                    audioCtx.resume();
-                }
-            };
-
+            videoElement.muted = true;
             videoElement
                 .play()
-                .catch((e) =>
-                    console.log(
-                        "Autoplay prevented (requires interaction):",
-                        e,
-                    ),
-                );
+                .catch((e) => console.log("Autoplay prevented:", e));
         }
     });
 
@@ -57,23 +24,19 @@
         if (videoElement) {
             videoElement.pause();
         }
-        if (audioCtx) {
-            audioCtx.close();
-        }
     });
 </script>
 
 <div class="slide">
     <div class="video-container">
-        <!-- Added controls so user can unmute/play if autoplay fails -->
         <video
             bind:this={videoElement}
             class="bg-video"
             src="/videos/mongol_invasion.mp4"
             loop
+            muted
             playsinline
             autoplay
-            controls
         ></video>
 
         <div class="video-overlay"></div>

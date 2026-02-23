@@ -153,14 +153,19 @@
 
   .s1-platform {
     position: relative;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-size: clamp(1rem, 1.8vw, 1.4rem); /* Increased size heavily */
     letter-spacing: 0.15em;
-    color: rgba(245, 240, 232, 0.8); /* Noticeable but modest */
-    padding: 0.3rem 0.8rem;
-    border: 1px solid rgba(245, 240, 232, 0.3);
+    color: rgba(
+      245,
+      240,
+      232,
+      0.9
+    ); /* Made slightly brighter for better readability at larger size */
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(245, 240, 232, 0.4);
     border-radius: 4px;
     margin-bottom: 2rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
   }
 
   .s1-tag {

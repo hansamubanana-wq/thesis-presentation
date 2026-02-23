@@ -27,11 +27,11 @@
 
 <div class="slide">
   <p class="s4-sub">解けない難問</p>
-  <h2 class="s4-main">究極の決断</h2>
+  <h2 class="s4-main">究極の問い</h2>
   <div class="s4-eq">
-    <span class="eq-a">「武士道ある戦いに固執する」</span>
-    <span class="eq-sym">＝</span>
-    <span class="eq-b">「民を見殺しにする」</span>
+    <span class="eq-a"
+      >「悪なる手段を用いて<br />善をなすことは許されるのか？」</span
+    >
   </div>
 </div>
 
@@ -74,16 +74,12 @@
     border-radius: 8px;
     background: rgba(139, 26, 26, 0.08);
   }
-  .eq-a,
-  .eq-b {
+  .eq-a {
     font-size: clamp(1.3rem, 2.8vw, 2.2rem);
     font-weight: 700;
     color: rgba(245, 240, 232, 0.88);
-  }
-  .eq-sym {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    color: #c0504d;
-    font-weight: 900;
+    text-align: center;
+    line-height: 1.5;
   }
 
   @media (max-width: 1366px) {
@@ -91,12 +87,8 @@
       font-size: clamp(3rem, 7vw, 6rem);
       margin: 0 0 2rem;
     }
-    .eq-a,
-    .eq-b {
+    .eq-a {
       font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-    }
-    .eq-sym {
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
     .s4-eq {
       gap: 1rem;
@@ -108,12 +100,8 @@
       font-size: clamp(2rem, 5.5vw, 4.5rem);
       margin: 0 0 1.5rem;
     }
-    .eq-a,
-    .eq-b {
+    .eq-a {
       font-size: clamp(0.95rem, 2vw, 1.4rem);
-    }
-    .eq-sym {
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
     }
     .s4-eq {
       gap: 0.8rem;
