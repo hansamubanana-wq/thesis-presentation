@@ -81,10 +81,11 @@
       ></span>{/each}
   </div>
 
-  <div class="s1-platform">PlayStation®4 / PlayStation®5用ソフトウェア</div>
   <p class="s1-tag">卒業論文</p>
   <h1 class="s1-title">
-    『ゴースト・オブ・ツシマ』<br />と<span class="red">必要悪</span>の倫理学
+    <span class="s1-sub">PlayStationゲーム</span>
+    『ゴースト・オブ・ツシマ』<br />
+    と<span class="red">必要悪</span>の倫理学
   </h1>
   <blockquote class="s1-quote">「必要悪」は存在するのか</blockquote>
   <p class="s1-name">土蔵 創一</p>
@@ -151,23 +152,6 @@
     opacity: 0; /* Base controlled by GSAP */
   }
 
-  .s1-platform {
-    position: relative;
-    font-size: clamp(1rem, 1.8vw, 1.4rem); /* Increased size heavily */
-    letter-spacing: 0.15em;
-    color: rgba(
-      245,
-      240,
-      232,
-      0.9
-    ); /* Made slightly brighter for better readability at larger size */
-    padding: 0.5rem 1.2rem;
-    border: 1px solid rgba(245, 240, 232, 0.4);
-    border-radius: 4px;
-    margin-bottom: 2rem;
-    background: rgba(0, 0, 0, 0.4);
-  }
-
   .s1-tag {
     position: relative;
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
@@ -183,6 +167,14 @@
     text-align: center;
     color: #f5f0e8;
     margin-bottom: 3rem;
+  }
+  .s1-sub {
+    font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+    color: rgba(245, 240, 232, 0.85);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: -0.2em; /* Adjusted margin slightly to look good with larger font */
   }
   .red {
     color: #c0504d;
