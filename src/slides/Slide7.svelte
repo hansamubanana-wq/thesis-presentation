@@ -49,7 +49,7 @@
     <div class="s7-beam"></div>
     <div class="pans">
       <div class="pan s7-left">
-        <div class="pan-name blue">功利主義</div>
+        <div class="pan-name blue">功利<br />主義</div>
         <div class="pan-sub">仁の正義<br />「結果」</div>
       </div>
       <div class="pan s7-right">
@@ -92,7 +92,7 @@
     line-height: 1;
   }
   .s7-beam {
-    width: min(800px, 90%);
+    width: min(1000px, 95%);
     height: 5px;
     background: linear-gradient(
       to right,
@@ -105,7 +105,7 @@
     transform-origin: center;
   }
   .pans {
-    width: min(800px, 90%);
+    width: min(1000px, 95%);
     display: flex;
     justify-content: space-between;
     margin-top: 1.2rem;
@@ -139,7 +139,6 @@
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 900;
     margin-bottom: 0.5rem;
-    white-space: nowrap;
   }
   .blue {
     color: #6c7a9c;
@@ -151,7 +150,6 @@
     font-size: clamp(0.9rem, 1.7vw, 1.3rem);
     color: rgba(245, 240, 232, 0.65);
     line-height: 1.5;
-    white-space: nowrap;
   }
 
   @media (max-width: 1366px) {

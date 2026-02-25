@@ -57,9 +57,9 @@
       { opacity: 1, duration: 0.5, delay: 1.8 },
     );
 
-    // Animate the final result (Ghost)
+    // Animate the final result (Prince)
     gsap.fromTo(
-      ".s8-ghost",
+      ".s8-prince",
       { opacity: 0, scale: 0.8, y: 30 },
       {
         opacity: 1,
@@ -71,9 +71,9 @@
       },
     );
 
-    gsap.to(".s8-ghost", {
-      boxShadow: "0 0 50px rgba(108, 122, 156, 0.4)",
-      borderColor: "rgba(108, 122, 156, 0.8)",
+    gsap.to(".s8-prince", {
+      boxShadow: "0 0 50px rgba(201, 168, 76, 0.4)",
+      borderColor: "rgba(201, 168, 76, 0.8)",
       repeat: -1,
       yoyo: true,
       duration: 2,
@@ -145,14 +145,16 @@
           />
         </svg>
 
-        <div class="elem s8-ghost">
-          <div class="ghost-header">
-            <div class="ghost-char">冥</div>
-            <div class="name blue">
-              <ruby>冥人<rt>くろうど</rt></ruby>（境井仁）
+        <div class="elem s8-prince">
+          <div class="prince-header">
+            <div class="prince-char">君</div>
+            <div class="name gold">
+              <ruby>君主<rt>くんしゅ</rt></ruby>
             </div>
           </div>
-          <div class="ghost-desc">武士道よりも、対馬を救うことを優先する</div>
+          <div class="prince-desc">
+            獅子の猛威と狐の狡智をあわせ持つ、国家を導く理想のリーダー
+          </div>
         </div>
       </div>
     </div>
@@ -273,16 +275,16 @@
     border: 1px solid rgba(176, 112, 48, 0.3);
   }
 
-  /* Bottom big box (Ghost) */
-  .s8-ghost {
+  /* Bottom big box (Prince) */
+  .s8-prince {
     opacity: 0;
-    background: rgba(108, 122, 156, 0.12);
-    border: 2px solid rgba(108, 122, 156, 0.4);
+    background: rgba(201, 168, 76, 0.12);
+    border: 2px solid rgba(201, 168, 76, 0.4);
     padding: 2rem;
     width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
-  .ghost-header {
+  .prince-header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -298,19 +300,19 @@
     border: 2px solid rgba(245, 240, 232, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
-  .ghost-char {
+  .prince-char {
     font-size: clamp(3.5rem, 6vw, 5rem);
     font-weight: 900;
-    color: #6c7a9c; /* Ghost Blue */
+    color: #c9a84c; /* Gold */
     line-height: 1;
-    text-shadow: 0 0 20px rgba(108, 122, 156, 0.3);
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
   }
   .name {
     font-size: clamp(1.3rem, 2.5vw, 2rem);
     font-weight: 900;
     margin-bottom: 0.3rem;
   }
-  .s8-ghost .name {
+  .s8-prince .name {
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     margin: 0;
     letter-spacing: 0.1em;
@@ -319,20 +321,17 @@
     font-size: clamp(0.95rem, 1.8vw, 1.3rem);
     color: rgba(245, 240, 232, 0.6);
   }
-  .ghost-desc {
+  .prince-desc {
     font-size: clamp(1rem, 2vw, 1.4rem);
     color: rgba(245, 240, 232, 0.8);
     line-height: 1.6;
-    border-top: 1px solid rgba(108, 122, 156, 0.3);
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
     padding-top: 1rem;
     width: 100%;
   }
 
   .gold {
     color: #c9a84c;
-  }
-  .blue {
-    color: #6c7a9c;
   }
 
   @media (max-width: 1366px) {
@@ -346,7 +345,7 @@
       font-size: clamp(1.8rem, 3.8vw, 3rem);
       margin-bottom: 2rem;
     }
-    .s8-ghost {
+    .s8-prince {
       padding: 1.5rem;
     }
     .merge-arrows {
@@ -380,10 +379,10 @@
     .s8-fox {
       padding: 1rem 0.5rem;
     }
-    .ghost-header {
+    .prince-header {
       gap: 1rem;
     }
-    .ghost-desc {
+    .prince-desc {
       font-size: clamp(0.85rem, 1.5vw, 1.1rem);
     }
     .merge-arrows {
