@@ -5,21 +5,19 @@
     let videoElement: HTMLVideoElement;
 
     onMount(() => {
-        const tl = gsap.timeline();
-
-        // 1. Title fades in and slides down
-        tl.fromTo(
+        // Only fade in the title initially
+        gsap.fromTo(
             ".title-wrapper",
             { opacity: 0, y: -30 },
             { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
-        )
-            // 2. Image container fades in and scales up slightly
-            .fromTo(
-                ".image-glass-container",
-                { opacity: 0, scale: 0.95 },
-                { opacity: 1, scale: 1, duration: 1, ease: "power2.out" },
-                "-=0.5",
-            );
+        );
+
+        // Initially hide the image container before video ends
+        gsap.set(".image-glass-container", {
+            opacity: 0,
+            scale: 0.95,
+            display: "none",
+        });
 
         if (videoElement) {
             videoElement.muted = true;
@@ -31,6 +29,15 @@
             }, 500);
         }
     });
+
+    const handleVideoEnded = () => {
+        // Fade in the image container once the video finishes
+        gsap.fromTo(
+            ".image-glass-container",
+            { opacity: 0, scale: 0.95, display: "flex" },
+            { opacity: 1, scale: 1, duration: 1, ease: "power2.out" },
+        );
+    };
 
     onDestroy(() => {
         if (videoElement) {
@@ -47,6 +54,7 @@
         muted
         playsinline
         autoplay
+        onended={handleVideoEnded}
     ></video>
 
     <div class="content">
@@ -94,14 +102,14 @@
         align-items: center;
         justify-content: flex-start;
         height: 100%;
-        padding: 3rem;
+        padding: 1.5rem 3rem; /* Reduced vertical padding to allow more image space */
         box-sizing: border-box;
     }
 
     .title-wrapper {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem; /* Reduced space below title */
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 0; /* Removed top margin */
     }
 
     .slide-title {
@@ -120,7 +128,7 @@
 
     .image-glass-container {
         width: 100%;
-        max-width: 1400px;
+        max-width: 1600px; /* Increased max width */
         flex-grow: 1;
         display: flex;
         justify-content: center;
@@ -131,19 +139,21 @@
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        padding: 1.5rem;
+        padding: 0.8rem; /* Reduced inner padding */
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
         min-height: 0; /* Important for flex child to shrink properly */
     }
 
     .invasion-img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
         object-fit: contain; /* Ensures the entire image is visible without cropping */
         border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        filter: drop-shadow(
+            0 10px 30px rgba(0, 0, 0, 0.7)
+        ); /* Drop shadow instead of box shadow for transparent edge handling */
         transition: opacity 0.3s ease;
-        background: rgba(0, 0, 0, 0.5);
+        /* Removed dark background so 'contain' empty areas don't look like black borders */
     }
 
     @media (max-width: 1024px) {
