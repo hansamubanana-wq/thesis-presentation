@@ -133,14 +133,14 @@
       <div class="logic-norm">
         <div class="logic-label dim">「平時」の論理（規範）</div>
         <div class="logic-val">
-          社会の秩序を維持するため<br />ルールの遵守は絶対
+          社会の秩序を<br>維持するため<br />ルールの遵守は絶対
         </div>
       </div>
       <div class="arrow">VS</div>
       <div class="logic-surv">
         <div class="logic-label highlight">「非常時」の論理（生存）</div>
         <div class="logic-val">
-          危機における規範の固守は<br />却って大量の死を招く
+          危機における<br>規範の固守は<br />却って大量の死を招く
         </div>
       </div>
     </div>

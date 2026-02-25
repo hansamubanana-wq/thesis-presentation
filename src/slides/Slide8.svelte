@@ -147,13 +147,12 @@
 
         <div class="elem s8-prince">
           <div class="prince-header">
-            <div class="prince-char">君</div>
             <div class="name gold">
               <ruby>君主<rt>くんしゅ</rt></ruby>
             </div>
           </div>
           <div class="prince-desc">
-            獅子の猛威と狐の狡智をあわせ持つ、国家を導く理想のリーダー
+            獅子の猛威と狐の狡智をあわせ持つ、<br />国家を導く理想のリーダー
           </div>
         </div>
       </div>
@@ -300,22 +299,23 @@
     border: 2px solid rgba(245, 240, 232, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
-  .prince-char {
-    font-size: clamp(3.5rem, 6vw, 5rem);
-    font-weight: 900;
-    color: #c9a84c; /* Gold */
-    line-height: 1;
-    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
-  }
   .name {
     font-size: clamp(1.3rem, 2.5vw, 2rem);
     font-weight: 900;
     margin-bottom: 0.3rem;
   }
   .s8-prince .name {
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(3.5rem, 6vw, 5rem);
     margin: 0;
     letter-spacing: 0.1em;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+  .s8-prince .name rt {
+    font-size: 0.35em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
   }
   .sub {
     font-size: clamp(0.95rem, 1.8vw, 1.3rem);

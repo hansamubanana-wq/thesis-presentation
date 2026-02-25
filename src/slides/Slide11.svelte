@@ -32,12 +32,12 @@
       <div class="tag blue">刑法第37条</div>
       <div class="title blue">緊急避難</div>
       <div class="body">
-        より大きな被害を防ぐためなら<strong>罰しない</strong>
+        より大きな被害を<br>防ぐためなら<strong>罰しない</strong>
       </div>
     </div>
     <div class="col s11-dirty">
       <div class="tag red">M.ウォルツァー</div>
-      <div class="title red">ダーティ・ハンズ</div>
+      <div class="title red">ダーティ<br>ハンズ</div>
       <div class="body"><strong>不作為もまた責任</strong>である</div>
     </div>
   </div>
