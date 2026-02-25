@@ -89,7 +89,7 @@
             <div class="char-content right-align">
                 <h4 class="char-name shimura-text">仁の育ての叔父：志村</h4>
                 <blockquote class="intro-quote shimura-quote">
-                    『誉れを失えば、守るべき国もまた失われる』
+                    『誉れを失えば、<br>守るべき国もまた失われる』
                 </blockquote>
                 <blockquote class="intro-quote shimura-quote">
                     正義：過程こそ正義

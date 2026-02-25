@@ -104,13 +104,13 @@
       <div class="fusion-layout">
         <div class="base-traits">
           <div class="elem s8-lion">
-            <div class="emo">🦁</div>
+            <img src="/images/lion.png" alt="ライオン" class="trait-img" />
             <div class="name gold">ライオン</div>
             <div class="sub">力・恐怖</div>
           </div>
 
           <div class="elem s8-fox">
-            <div class="emo">🦊</div>
+            <img src="/images/fox.png" alt="狐" class="trait-img" />
             <div class="name" style="color:#c9884c">狐</div>
             <div class="sub">知恵・欺瞞</div>
           </div>
@@ -152,9 +152,7 @@
               <ruby>冥人<rt>くろうど</rt></ruby>（境井仁）
             </div>
           </div>
-          <div class="ghost-desc">
-            武士道よりも、対馬を救うことを優先する
-          </div>
+          <div class="ghost-desc">武士道よりも、対馬を救うことを優先する</div>
         </div>
       </div>
     </div>
@@ -291,9 +289,14 @@
     margin-bottom: 1rem;
   }
 
-  .emo {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 0.5rem;
+  .trait-img {
+    width: clamp(80px, 12vw, 110px);
+    height: clamp(80px, 12vw, 110px);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(245, 240, 232, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
   .ghost-char {
     font-size: clamp(3.5rem, 6vw, 5rem);
@@ -367,6 +370,11 @@
     }
     .elem {
       padding: 1rem;
+    }
+    .trait-img {
+      width: clamp(60px, 10vw, 85px);
+      height: clamp(60px, 10vw, 85px);
+      margin-bottom: 0.5rem;
     }
     .s8-lion,
     .s8-fox {

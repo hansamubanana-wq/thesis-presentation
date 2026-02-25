@@ -27,7 +27,7 @@
     <div class="references">
         <!-- 参考文献 1 -->
         <div class="ref-card s16-book">
-            <div class="ref-icon">📖</div>
+            <img class="ref-img" src="/images/kunsyuron.jpg" alt="君主論" />
             <div class="ref-content">
                 <h3 class="ref-title">『君主論』</h3>
                 <p class="ref-author dim">ニッコロ・マキャヴェッリ</p>
@@ -40,12 +40,16 @@
 
         <!-- 参考作品 2 -->
         <div class="ref-card s16-game">
-            <div class="ref-icon">🎮</div>
+            <img
+                class="ref-img"
+                src="/images/tsushima.jpg"
+                alt="Ghost of Tsushima"
+            />
             <div class="ref-content">
                 <h3 class="ref-title">『Ghost of Tsushima』</h3>
                 <p class="ref-author dim">Sucker Punch Productions</p>
                 <p class="ref-desc">
-                    本卒業論文で題材としたゲームです。武士道と現実の戦いとの葛藤が美しくも残酷に描かれています。
+                    本卒業論文で題材としたゲームです。武士道と現実の戦いとの葛藤が美しく描かれています。
                     <span class="highlight"
                         >とにかく面白いので、ぜひ実際にプレイしてみてください！</span
                     >
@@ -118,10 +122,12 @@
         border-color: rgba(201, 168, 76, 0.3);
     }
 
-    .ref-icon {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
+    .ref-img {
+        width: clamp(80px, 12vw, 120px);
+        height: auto;
+        border-radius: 8px;
         flex-shrink: 0;
-        line-height: 1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
     .ref-content {
         display: flex;
@@ -153,19 +159,48 @@
     }
 
     @media (max-width: 1366px) {
-        .s16-head { font-size:clamp(2rem,4.5vw,3.5rem); margin-bottom:2.5rem; }
-        .ref-card { padding:1.5rem; gap:1.5rem; }
-        .references { gap:2rem; }
-        .ref-title { font-size:clamp(1.2rem,2.3vw,1.7rem); }
-        .ref-desc { font-size:clamp(0.9rem,1.5vw,1.1rem); }
+        .s16-head {
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            margin-bottom: 2.5rem;
+        }
+        .ref-card {
+            padding: 1.5rem;
+            gap: 1.5rem;
+        }
+        .references {
+            gap: 2rem;
+        }
+        .ref-title {
+            font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+        }
+        .ref-desc {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+        }
     }
     @media (max-width: 1024px) {
-        .s16-head { font-size:clamp(1.8rem,4vw,3rem); margin-bottom:2rem; }
-        .ref-card { padding:1.2rem; gap:1.2rem; }
-        .references { gap:1.5rem; }
-        .ref-icon { font-size:clamp(2rem,3vw,2.8rem); }
-        .ref-title { font-size:clamp(1rem,2vw,1.4rem); }
-        .ref-author { font-size:clamp(0.8rem,1.3vw,0.95rem); }
-        .ref-desc { font-size:clamp(0.8rem,1.3vw,0.95rem); line-height:1.5; }
+        .s16-head {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+        }
+        .ref-card {
+            padding: 1.2rem;
+            gap: 1.2rem;
+        }
+        .references {
+            gap: 1.5rem;
+        }
+        .ref-img {
+            width: clamp(60px, 10vw, 90px);
+        }
+        .ref-title {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+        }
+        .ref-author {
+            font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+        }
+        .ref-desc {
+            font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+            line-height: 1.5;
+        }
     }
 </style>

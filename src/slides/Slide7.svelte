@@ -139,6 +139,7 @@
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 900;
     margin-bottom: 0.5rem;
+    white-space: nowrap;
   }
   .blue {
     color: #6c7a9c;
@@ -150,6 +151,7 @@
     font-size: clamp(0.9rem, 1.7vw, 1.3rem);
     color: rgba(245, 240, 232, 0.65);
     line-height: 1.5;
+    white-space: nowrap;
   }
 
   @media (max-width: 1366px) {
