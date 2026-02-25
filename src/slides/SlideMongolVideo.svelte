@@ -48,7 +48,6 @@
         playsinline
         autoplay
     ></video>
-    <div class="bg-overlay"></div>
 
     <div class="content">
         <div class="title-wrapper">
@@ -85,21 +84,6 @@
         height: 100%;
         object-fit: cover;
         z-index: 1;
-    }
-
-    .bg-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* Dramatic radial gradient to focus on the center and text */
-        background: radial-gradient(
-            circle at center,
-            rgba(0, 0, 0, 0.45) 0%,
-            rgba(9, 7, 10, 0.85) 100%
-        );
-        z-index: 2;
     }
 
     .content {
